@@ -1,0 +1,104 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "createdTime" : 1666845488275,
+    "debugMode" : true,
+    "externalId" : null,
+    "firstRuleNodeId" : null,
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "27beee30-55b1-11ed-b28a-eb999599ab40"
+    },
+    "name" : "Temperature Emulator",
+    "root" : false,
+    "tenantId" : null,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 2,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 2,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : null,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 296,
+        "layoutY" : 72
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = (Math.random() * 0.3) + 5 * Math.sin(degrees_to_radians(minuteHandAngleDegs)).toFixed(2);\n\nvar msg = {\n    value: 22 + v,\n    type: \"TEMPERATURE\",\n    simon: \"Simon\",\n    minuteHand,\n    minuteHandAngleDegs\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
+        "originatorId" : "27c79630-55b0-11ed-8ab1-ebe8b1422014",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4355a7a0-55b2-11ed-b28a-eb999599ab40"
+      },
+      "name" : "T1 simulator",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 308,
+        "layoutY" : 276
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = (Math.random() * 0.3) + 8 * Math.cos(degrees_to_radians(minuteHandAngleDegs) * 4).toFixed(2);\n\nvar msg = {\n    value: 22 + v,\n    type: \"TEMPERATURE\",\n    simon: \"Simon\",\n    minuteHand,\n    minuteHandAngleDegs\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
+        "originatorId" : "67255ba0-55b0-11ed-b28a-eb999599ab40",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4355ceb0-55b2-11ed-b28a-eb999599ab40"
+      },
+      "name" : "T2 simulator",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 614,
+        "layoutY" : 169
+      },
+      "configuration" : {
+        "ruleChainId" : "a2b996f0-55a5-11ed-9bfe-295761657fe1"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4355f5c0-55b2-11ed-b28a-eb999599ab40"
+      },
+      "name" : "Feed in to normal chain",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

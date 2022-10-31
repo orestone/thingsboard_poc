@@ -1,9 +1,7 @@
 {
   "entityType" : "ENTITY_GROUP",
   "entity" : {
-    "additionalInfo" : {
-      "description" : ""
-    },
+    "additionalInfo" : null,
     "configuration" : {
       "columns" : [ {
         "type" : "ENTITY_FIELD",
@@ -11,42 +9,39 @@
         "sortOrder" : "DESC"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "title",
+        "key" : "first_name",
+        "sortOrder" : "NONE"
+      }, {
+        "type" : "ENTITY_FIELD",
+        "key" : "last_name",
         "sortOrder" : "NONE"
       }, {
         "type" : "ENTITY_FIELD",
         "key" : "email",
         "sortOrder" : "NONE"
-      }, {
-        "type" : "ENTITY_FIELD",
-        "key" : "country",
-        "sortOrder" : "NONE"
-      }, {
-        "type" : "ENTITY_FIELD",
-        "key" : "city",
-        "sortOrder" : "NONE"
       } ],
       "settings" : { },
       "actions" : { }
     },
-    "createdTime" : 1666931127149,
+    "createdTime" : 1666840540308,
     "edgeGroupAll" : false,
     "externalId" : null,
-    "groupAll" : false,
+    "groupAll" : true,
     "id" : {
       "entityType" : "ENTITY_GROUP",
-      "id" : "8c7e11d0-5678-11ed-9bfe-295761657fe1"
+      "id" : "a2871540-55a5-11ed-9bfe-295761657fe1"
     },
-    "name" : "Hyperscaler Customer B",
+    "name" : "All",
     "ownerId" : {
       "entityType" : "TENANT",
       "id" : "a283e0f0-55a5-11ed-9bfe-295761657fe1"
     },
-    "type" : "CUSTOMER"
+    "type" : "USER"
   },
   "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   },
-  "groupEntities" : true
+  "groupEntities" : true,
+  "permissions" : [ ]
 }

@@ -1,0 +1,569 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "description" : "",
+      "widgets" : {
+        "8c9e2cf6-5cd8-e003-07db-17316e994cf0" : {
+          "isSystemType" : true,
+          "bundleAlias" : "analogue_gauges",
+          "typeAlias" : "radial_gauge_canvas_gauges",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 6,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "0a23daa8-b2e4-3940-31a9-d320d86a841e",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "averageValue",
+                "type" : "timeseries",
+                "label" : "deg C",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.0950197192993254,
+                "units" : null,
+                "decimals" : 1,
+                "funcBody" : null,
+                "usePostProcessing" : false,
+                "postFuncBody" : null
+              } ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "startAngle" : 45,
+              "ticksAngle" : 270,
+              "needleCircleSize" : 10,
+              "defaultColor" : "#e65100",
+              "minValue" : 15,
+              "maxValue" : 40,
+              "colorMajorTicks" : "#444",
+              "colorMinorTicks" : "#666",
+              "numbersFont" : {
+                "family" : "Roboto",
+                "size" : 18,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#616161"
+              },
+              "showUnitTitle" : true,
+              "titleFont" : {
+                "family" : "Roboto",
+                "size" : 24,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#888"
+              },
+              "unitsFont" : {
+                "family" : "Roboto",
+                "size" : 22,
+                "style" : "normal",
+                "weight" : "500",
+                "color" : "#616161"
+              },
+              "valueBox" : true,
+              "valueInt" : 2,
+              "valueFont" : {
+                "family" : "Segment7Standard",
+                "size" : 36,
+                "style" : "normal",
+                "weight" : "normal",
+                "shadowColor" : "rgba(0, 0, 0, 0.49)",
+                "color" : "#444"
+              },
+              "colorValueBoxRect" : "#888",
+              "colorValueBoxRectEnd" : "#666",
+              "colorValueBoxBackground" : "#babab2",
+              "colorValueBoxShadow" : "rgba(0,0,0,1)",
+              "showBorder" : true,
+              "colorPlate" : "#fff",
+              "colorNeedleShadowUp" : "rgba(2, 255, 255, 0)",
+              "colorNeedleShadowDown" : "rgba(188,143,143,0.45)",
+              "highlightsWidth" : 15,
+              "highlights" : [ ],
+              "animation" : true,
+              "animationDuration" : 500,
+              "animationRule" : "cycle"
+            },
+            "title" : "Average Temperature",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showTitleIcon" : false,
+            "titleTooltip" : "Some tooltip",
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : false,
+            "titleIcon" : "show_chart",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : false,
+              "showTotal" : false,
+              "showLatest" : false
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "8c9e2cf6-5cd8-e003-07db-17316e994cf0"
+        },
+        "d2f2b0cd-3f7d-fc73-e3e7-0b783453184e" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "basic_timeseries",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "0a23daa8-b2e4-3940-31a9-d320d86a841e",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "avCompoundsSensorValue",
+                "type" : "timeseries",
+                "label" : "${entityName} (average)",
+                "color" : "rgba(174,41,41,0.64)",
+                "settings" : { },
+                "_hash" : 0.8606118185753875,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "latestDataKeys" : [ ]
+            }, {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "f2269c98-638c-675b-e5c0-9d1ab21ba397",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "avTempSensorValue",
+                "type" : "timeseries",
+                "label" : "${entityName}",
+                "color" : "#f44336",
+                "settings" : { },
+                "_hash" : 0.5489222542574719,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "latestDataKeys" : null
+            }, {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "22e8f563-1e98-e194-9872-0d9a586bb9c9",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "value",
+                "type" : "timeseries",
+                "label" : "${entityName}",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.519557156279691,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "latestDataKeys" : null
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : true,
+              "hideAggInterval" : true,
+              "hideTimezone" : false,
+              "selectedTab" : 1,
+              "history" : {
+                "historyType" : 0,
+                "timewindowMs" : 7200000,
+                "interval" : 15000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1666763359502,
+                  "endTimeMs" : 1666849759502
+                },
+                "quickInterval" : "CURRENT_HOUR"
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "stack" : false,
+              "fontSize" : 10,
+              "fontColor" : "#545454",
+              "showTooltip" : true,
+              "tooltipIndividual" : true,
+              "tooltipCumulative" : false,
+              "hideZeros" : false,
+              "grid" : {
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1,
+                "color" : "#545454",
+                "backgroundColor" : null,
+                "tickColor" : "#DDDDDD"
+              },
+              "xaxis" : {
+                "title" : null,
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "yaxis" : {
+                "min" : null,
+                "max" : null,
+                "title" : null,
+                "showLabels" : true,
+                "color" : "#545454",
+                "tickSize" : null,
+                "tickDecimals" : 0,
+                "ticksFormatter" : ""
+              },
+              "shadowSize" : 4,
+              "smoothLines" : false,
+              "comparisonEnabled" : false,
+              "xaxisSecond" : {
+                "axisPosition" : "top",
+                "title" : null,
+                "showLabels" : true
+              },
+              "customLegendEnabled" : false
+            },
+            "title" : "New Timeseries Line Chart",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : false,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : true,
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : false,
+              "showMin" : true,
+              "showMax" : true,
+              "showAvg" : false,
+              "showTotal" : false,
+              "showLatest" : true
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "d2f2b0cd-3f7d-fc73-e3e7-0b783453184e"
+        },
+        "0a46e4b2-045a-07f3-8eb9-9642de060f95" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "entities_hierarchy",
+          "type" : "latest",
+          "title" : "Entities hierarchy",
+          "sizeX" : 15,
+          "sizeY" : 7,
+          "row" : 0,
+          "col" : 2,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "nodeRelationQueryFunction" : "var entity = nodeCtx.entity;\nvar query = {\n    parameters: {\n        rootId: entity.id.id,\n        rootType: entity.id.entityType,\n        direction: \"FROM\",\n        maxLevel: 1\n    },\n    filters: [{\n        relationType: \"Contains\",\n        entityTypes: []\n    }]\n};\nreturn query;\n\n/**\n\n// Function should return relations query object for current node used to fetch entity children.\n// Function can return 'default' string value. In this case default relations query will be used.\n\n// The following example code will construct simple relations query that will fetch relations of type 'Contains'\n// from the current entity.\n\nvar entity = nodeCtx.entity;\nvar query = {\n    parameters: {\n        rootId: entity.id.id,\n        rootType: entity.id.entityType,\n        direction: \"FROM\",\n        maxLevel: 1\n    },\n    filters: [{\n        relationType: \"Contains\",\n        entityTypes: []\n    }]\n};\nreturn query;\n\n**/\n",
+              "nodeHasChildrenFunction" : "/**\n\n// Function should return boolean value indicating whether current node has children (whether it can be expanded).\n\n// The following example code will restrict entities hierarchy expansion up to third level.\n\nreturn nodeCtx.level <= 2;\n\n// The next example code will restrict entities expansion according to the value of example 'nodeHasChildren' attribute.\n\nvar data = nodeCtx.data;\nif (data.hasOwnProperty('nodeHasChildren') && data['nodeHasChildren'] !== null) {\n    return data['nodeHasChildren'] === 'true';\n} else {\n    return true;\n}\n  \n**/\n ",
+              "nodeOpenedFunction" : "/**\n\n// Function should return boolean value indicating whether current node should be opened (expanded) when it first loaded.\n\n// The following example code will open by default nodes up to third level.\n\nreturn nodeCtx.level <= 2;\n\n**/\n ",
+              "nodeDisabledFunction" : "/**\n\n// Function should return boolean value indicating whether current node should be disabled (not selectable).\n\n// The following example code will disable current node according to the value of example 'nodeDisabled' attribute.\n\nvar data = nodeCtx.data;\nif (data.hasOwnProperty('nodeDisabled') && data['nodeDisabled'] !== null) {\n    return data['nodeDisabled'] === 'true';\n} else {\n    return false;\n}\n  \n**/\n",
+              "nodeIconFunction" : "/** \n\n// Function should return node icon info object.\n// Resulting object should contain either 'materialIcon' or 'iconUrl' property. \n// Where:\n    - 'materialIcon' - name of the material icon to be used from the Material Icons Library (https://material.io/tools/icons);\n    - 'iconUrl' - url of the external image to be used as node icon.\n// Function can return 'default' string value. In this case default icons according to entity type will be used.\n\n// The following example code shows how to use external image for devices which name starts with 'Test' and use \n// default icons for the rest of entities.\n\nvar entity = nodeCtx.entity;\nif (entity.id.entityType === 'DEVICE' && entity.name.startsWith('Test')) {\n    return {iconUrl: 'https://avatars1.githubusercontent.com/u/14793288?v=4&s=117'};\n} else {\n    return 'default';\n}\n \n**/",
+              "nodeTextFunction" : "/**\n\n// Function should return text (can be HTML code) for the current node.\n\n// The following example code will generate node text consisting of entity name and temperature if temperature value is present in entity attributes/timeseries.\n\nvar data =  nodeCtx.data;\nvar entity = nodeCtx.entity;\nvar text = entity.name;\nif (data.hasOwnProperty('temperature') && data['temperature'] !== null) {\n    text += \" <b>\"+ data['temperature'] +\" °C</b>\";\n}\nreturn text;\n\n**/",
+              "nodesSortFunction" : "/**\n\n// This function is used to sort nodes of the same level. Function should compare two nodes and return \n// integer value: \n//     - less than 0 - sort nodeCtx1 to an index lower than nodeCtx2\n//     - 0 - leave nodeCtx1 and nodeCtx2 unchanged with respect to each other\n//     - greater than 0 - sort nodeCtx2 to an index lower than nodeCtx1\n\n// The following example code will sort entities first by entity type in alphabetical order then\n// by entity name in alphabetical order.\n\nvar result = nodeCtx1.entity.id.entityType.localeCompare(nodeCtx2.entity.id.entityType);\nif (result === 0) {\n    result = nodeCtx1.entity.name.localeCompare(nodeCtx2.entity.name);\n}\nreturn result;\n  \n**/"
+            },
+            "title" : "Entities hierarchy",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "0a23daa8-b2e4-3940-31a9-d320d86a841e",
+              "filterId" : null,
+              "dataKeys" : [ ]
+            } ],
+            "widgetStyle" : { },
+            "actions" : { }
+          },
+          "id" : "0a46e4b2-045a-07f3-8eb9-9642de060f95"
+        },
+        "a8ba1b5e-4b01-f3f3-f738-7f89d6674004" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "entities_hierarchy",
+          "type" : "latest",
+          "title" : "Entities hierarchy",
+          "sizeX" : 15,
+          "sizeY" : 7,
+          "row" : 0,
+          "col" : 2,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "nodeRelationQueryFunction" : "var entity = nodeCtx.entity;\nvar query = {\n    parameters: {\n        rootId: entity.id.id,\n        rootType: entity.id.entityType,\n        direction: \"FROM\",\n        maxLevel: 1\n    },\n    filters: [{\n        relationType: \"Contains\",\n        entityTypes: []\n    }]\n};\nreturn query;\n\n/**\n\n// Function should return relations query object for current node used to fetch entity children.\n// Function can return 'default' string value. In this case default relations query will be used.\n\n// The following example code will construct simple relations query that will fetch relations of type 'Contains'\n// from the current entity.\n\nvar entity = nodeCtx.entity;\nvar query = {\n    parameters: {\n        rootId: entity.id.id,\n        rootType: entity.id.entityType,\n        direction: \"FROM\",\n        maxLevel: 1\n    },\n    filters: [{\n        relationType: \"Contains\",\n        entityTypes: []\n    }]\n};\nreturn query;\n\n**/\n",
+              "nodeHasChildrenFunction" : "/**\n\n// Function should return boolean value indicating whether current node has children (whether it can be expanded).\n\n// The following example code will restrict entities hierarchy expansion up to third level.\n\nreturn nodeCtx.level <= 2;\n\n// The next example code will restrict entities expansion according to the value of example 'nodeHasChildren' attribute.\n\nvar data = nodeCtx.data;\nif (data.hasOwnProperty('nodeHasChildren') && data['nodeHasChildren'] !== null) {\n    return data['nodeHasChildren'] === 'true';\n} else {\n    return true;\n}\n  \n**/\n ",
+              "nodeOpenedFunction" : "/**\n\n// Function should return boolean value indicating whether current node should be opened (expanded) when it first loaded.\n\n// The following example code will open by default nodes up to third level.\n\nreturn nodeCtx.level <= 2;\n\n**/\n ",
+              "nodeDisabledFunction" : "/**\n\n// Function should return boolean value indicating whether current node should be disabled (not selectable).\n\n// The following example code will disable current node according to the value of example 'nodeDisabled' attribute.\n\nvar data = nodeCtx.data;\nif (data.hasOwnProperty('nodeDisabled') && data['nodeDisabled'] !== null) {\n    return data['nodeDisabled'] === 'true';\n} else {\n    return false;\n}\n  \n**/\n",
+              "nodeIconFunction" : "/** \n\n// Function should return node icon info object.\n// Resulting object should contain either 'materialIcon' or 'iconUrl' property. \n// Where:\n    - 'materialIcon' - name of the material icon to be used from the Material Icons Library (https://material.io/tools/icons);\n    - 'iconUrl' - url of the external image to be used as node icon.\n// Function can return 'default' string value. In this case default icons according to entity type will be used.\n\n// The following example code shows how to use external image for devices which name starts with 'Test' and use \n// default icons for the rest of entities.\n\nvar entity = nodeCtx.entity;\nif (entity.id.entityType === 'DEVICE' && entity.name.startsWith('Test')) {\n    return {iconUrl: 'https://avatars1.githubusercontent.com/u/14793288?v=4&s=117'};\n} else {\n    return 'default';\n}\n \n**/",
+              "nodeTextFunction" : "/**\n\n// Function should return text (can be HTML code) for the current node.\n\n// The following example code will generate node text consisting of entity name and temperature if temperature value is present in entity attributes/timeseries.\n\nvar data =  nodeCtx.data;\nvar entity = nodeCtx.entity;\nvar text = entity.name;\nif (data.hasOwnProperty('temperature') && data['temperature'] !== null) {\n    text += \" <b>\"+ data['temperature'] +\" °C</b>\";\n}\nreturn text;\n\n**/",
+              "nodesSortFunction" : "/**\n\n// This function is used to sort nodes of the same level. Function should compare two nodes and return \n// integer value: \n//     - less than 0 - sort nodeCtx1 to an index lower than nodeCtx2\n//     - 0 - leave nodeCtx1 and nodeCtx2 unchanged with respect to each other\n//     - greater than 0 - sort nodeCtx2 to an index lower than nodeCtx1\n\n// The following example code will sort entities first by entity type in alphabetical order then\n// by entity name in alphabetical order.\n\nvar result = nodeCtx1.entity.id.entityType.localeCompare(nodeCtx2.entity.id.entityType);\nif (result === 0) {\n    result = nodeCtx1.entity.name.localeCompare(nodeCtx2.entity.name);\n}\nreturn result;\n  \n**/"
+            },
+            "title" : "Entities hierarchy",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "f2269c98-638c-675b-e5c0-9d1ab21ba397",
+              "filterId" : null,
+              "dataKeys" : [ ]
+            } ],
+            "widgetStyle" : { },
+            "actions" : { }
+          },
+          "id" : "a8ba1b5e-4b01-f3f3-f738-7f89d6674004"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "Hall averaged temperature",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "8c9e2cf6-5cd8-e003-07db-17316e994cf0" : {
+                  "sizeX" : 6,
+                  "sizeY" : 5,
+                  "row" : 0,
+                  "col" : 3,
+                  "mobileHide" : false
+                },
+                "d2f2b0cd-3f7d-fc73-e3e7-0b783453184e" : {
+                  "sizeX" : 9,
+                  "sizeY" : 5,
+                  "row" : 5,
+                  "col" : 0
+                },
+                "0a46e4b2-045a-07f3-8eb9-9642de060f95" : {
+                  "sizeX" : 3,
+                  "sizeY" : 5,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "a8ba1b5e-4b01-f3f3-f738-7f89d6674004" : {
+                  "sizeX" : 3,
+                  "sizeY" : 5,
+                  "row" : 0,
+                  "col" : 9
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%",
+                "autoFillHeight" : false,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "0a23daa8-b2e4-3940-31a9-d320d86a841e" : {
+          "id" : "0a23daa8-b2e4-3940-31a9-d320d86a841e",
+          "alias" : "Hall 1",
+          "filter" : {
+            "type" : "singleEntity",
+            "resolveMultiple" : false,
+            "singleEntity" : {
+              "entityType" : "ASSET",
+              "id" : "eb9aec70-55af-11ed-bb6e-8f34ea6bbc86"
+            }
+          }
+        },
+        "22e8f563-1e98-e194-9872-0d9a586bb9c9" : {
+          "id" : "22e8f563-1e98-e194-9872-0d9a586bb9c9",
+          "alias" : "Sensors in Hall",
+          "filter" : {
+            "type" : "entityGroup",
+            "resolveMultiple" : true,
+            "groupStateEntity" : false,
+            "stateEntityParamName" : null,
+            "defaultStateGroupType" : null,
+            "defaultStateEntityGroup" : null,
+            "groupType" : "DEVICE",
+            "entityGroup" : "c9173e00-58b2-11ed-9bfe-295761657fe1"
+          }
+        },
+        "f2269c98-638c-675b-e5c0-9d1ab21ba397" : {
+          "id" : "f2269c98-638c-675b-e5c0-9d1ab21ba397",
+          "alias" : "Compounds in Hall",
+          "filter" : {
+            "type" : "entityGroup",
+            "resolveMultiple" : true,
+            "groupStateEntity" : false,
+            "stateEntityParamName" : null,
+            "defaultStateGroupType" : "ASSET",
+            "defaultStateEntityGroup" : "55c63b60-58ab-11ed-8ab1-ebe8b1422014",
+            "groupType" : "ASSET",
+            "entityGroup" : "55c63b60-58ab-11ed-8ab1-ebe8b1422014"
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "displayValue" : "",
+        "hideInterval" : false,
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "quickInterval" : "CURRENT_DAY"
+        },
+        "history" : {
+          "historyType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "fixedTimewindow" : {
+            "startTimeMs" : 1666763081485,
+            "endTimeMs" : 1666849481485
+          },
+          "quickInterval" : "CURRENT_DAY"
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true,
+        "titleColor" : "rgba(0,0,0,0.870588)",
+        "showDashboardLogo" : true,
+        "dashboardLogoUrl" : "data:image/png;base64,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",
+        "hideToolbar" : false,
+        "showFilters" : true,
+        "showUpdateDashboardImage" : true,
+        "dashboardCss" : ""
+      }
+    },
+    "createdTime" : 1666847961740,
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "ea0bbcc0-55b6-11ed-b28a-eb999599ab40"
+    },
+    "image" : "data:image/png;base64,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",
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "Hall Temp",
+    "ownerId" : null,
+    "tenantId" : null,
+    "title" : "Hall Temp"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

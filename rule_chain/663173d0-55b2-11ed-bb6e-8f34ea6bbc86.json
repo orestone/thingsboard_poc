@@ -8,10 +8,7 @@
     "createdTime" : 1666846022541,
     "debugMode" : true,
     "externalId" : null,
-    "firstRuleNodeId" : {
-      "entityType" : "RULE_NODE",
-      "id" : "f4272100-55b5-11ed-8ab1-ebe8b1422014"
-    },
+    "firstRuleNodeId" : null,
     "id" : {
       "entityType" : "RULE_CHAIN",
       "id" : "663173d0-55b2-11ed-bb6e-8f34ea6bbc86"
@@ -24,55 +21,43 @@
   "metaData" : {
     "connections" : [ {
       "fromIndex" : 0,
-      "toIndex" : 2,
-      "type" : "Success"
-    }, {
-      "fromIndex" : 1,
-      "toIndex" : 3,
+      "toIndex" : 1,
       "type" : "Failure"
     }, {
-      "fromIndex" : 1,
-      "toIndex" : 3,
+      "fromIndex" : 0,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 0,
       "type" : "Success"
     }, {
       "fromIndex" : 2,
       "toIndex" : 1,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 1,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 1,
+      "type" : "Failure"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 1,
       "type" : "Success"
     } ],
-    "firstNodeIndex" : 0,
+    "firstNodeIndex" : null,
     "nodes" : [ {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 357,
-        "layoutY" : 153
-      },
-      "configuration" : {
-        "originatorSource" : "RELATED",
-        "relationsQuery" : {
-          "fetchLastLevelOnly" : true,
-          "direction" : "TO",
-          "maxLevel" : 1,
-          "filters" : [ {
-            "relationType" : "Contains",
-            "entityTypes" : [ "ASSET" ]
-          } ]
-        }
-      },
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "f4272100-55b5-11ed-8ab1-ebe8b1422014"
-      },
-      "name" : "to Parent Asset",
-      "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 953,
-        "layoutY" : 159
+        "layoutX" : 888,
+        "layoutY" : 110
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -92,47 +77,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 672,
-        "layoutY" : 161
-      },
-      "configuration" : {
-        "inputValueKey" : "value",
-        "outputValueKey" : "averageValue",
-        "mathFunction" : "AVG",
-        "aggIntervalType" : "CUSTOM",
-        "timeZoneId" : "Australia/Brisbane",
-        "aggIntervalValue" : 1,
-        "aggIntervalTimeUnit" : "MINUTES",
-        "intervalPersistencePolicy" : "ON_EACH_CHECK_AFTER_INTERVAL_END",
-        "intervalCheckValue" : 1,
-        "intervalCheckTimeUnit" : "MINUTES",
-        "statePersistencePolicy" : "ON_EACH_CHANGE",
-        "statePersistenceValue" : 1,
-        "statePersistenceTimeUnit" : "MINUTES",
-        "autoCreateIntervals" : false,
-        "periodValue" : 5,
-        "periodTimeUnit" : "MINUTES",
-        "parentEntitiesQuery" : {
-          "type" : "group",
-          "entityGroupId" : null
-        },
-        "queueName" : null
-      },
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "3e0557d0-55e6-11ed-bb6e-8f34ea6bbc86"
-      },
-      "name" : "Average",
-      "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1302,
-        "layoutY" : 165
+        "layoutX" : 1285,
+        "layoutY" : 465
       },
       "configuration" : {
         "jsScript" : "return '\\nIncoming message:\\n' + JSON.stringify(msg) + '\\nIncoming metadata:\\n' + JSON.stringify(metadata);"
@@ -147,6 +93,88 @@
       "name" : "Log It",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 452,
+        "layoutY" : 113
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : {
+            "entityType" : "ENTITY_GROUP",
+            "id" : "a3472560-55af-11ed-8ab1-ebe8b1422014"
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "avTempSensorValue",
+          "defaultValue" : -11,
+          "aggFunction" : "AVG",
+          "target" : "avCompoundsSensorValue"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "",
+          "defaultValue" : 0,
+          "aggFunction" : "COUNT",
+          "target" : "compoundsCount"
+        } ],
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "cab5b980-58b7-11ed-8ab1-ebe8b1422014"
+      },
+      "name" : "Roll up Hall",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 481,
+        "layoutY" : 237
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : {
+            "entityType" : "ENTITY_GROUP",
+            "id" : "55c63b60-58ab-11ed-8ab1-ebe8b1422014"
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "msg.value",
+          "defaultValue" : -15,
+          "aggFunction" : "AVG",
+          "target" : "avTempSensorValue"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "",
+          "defaultValue" : 0,
+          "aggFunction" : "COUNT",
+          "target" : "sensorsCount"
+        } ],
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "4e661d60-58ea-11ed-a40f-6527c4d13844"
+      },
+      "name" : "Roll up to Compounds",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
     } ],
     "ruleChainConnections" : null
   },

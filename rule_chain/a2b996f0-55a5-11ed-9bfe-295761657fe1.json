@@ -21,10 +21,6 @@
   },
   "metaData" : {
     "connections" : [ {
-      "fromIndex" : 0,
-      "toIndex" : 11,
-      "type" : "Success"
-    }, {
       "fromIndex" : 2,
       "toIndex" : 0,
       "type" : "Post telemetry"
@@ -76,6 +72,7 @@
     "firstNodeIndex" : 9,
     "nodes" : [ {
       "additionalInfo" : {
+        "description" : null,
         "layoutX" : 999,
         "layoutY" : 271
       },
@@ -83,7 +80,7 @@
         "defaultTTL" : 0
       },
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -113,6 +110,7 @@
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
     }, {
       "additionalInfo" : {
+        "description" : null,
         "layoutX" : 566,
         "layoutY" : 302
       },
@@ -120,7 +118,7 @@
         "version" : 0
       },
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -249,7 +247,7 @@
         "fetchAlarmRulesStateOnStart" : false
       },
       "createdTime" : 0,
-      "debugMode" : false,
+      "debugMode" : true,
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
@@ -275,25 +273,6 @@
         "id" : "a2bc7d20-55a5-11ed-9bfe-295761657fe1"
       },
       "name" : "Generate Report",
-      "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 1236,
-        "layoutY" : 348
-      },
-      "configuration" : {
-        "ruleChainId" : "663173d0-55b2-11ed-bb6e-8f34ea6bbc86"
-      },
-      "createdTime" : 0,
-      "debugMode" : false,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "d4ce4160-55b2-11ed-a40f-6527c4d13844"
-      },
-      "name" : "Avergage Temperature",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
     } ],

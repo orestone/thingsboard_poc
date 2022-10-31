@@ -11,38 +11,34 @@
         "sortOrder" : "DESC"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "title",
+        "key" : "name",
         "sortOrder" : "NONE"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "email",
+        "key" : "device_profile",
         "sortOrder" : "NONE"
       }, {
         "type" : "ENTITY_FIELD",
-        "key" : "country",
-        "sortOrder" : "NONE"
-      }, {
-        "type" : "ENTITY_FIELD",
-        "key" : "city",
+        "key" : "label",
         "sortOrder" : "NONE"
       } ],
       "settings" : { },
       "actions" : { }
     },
-    "createdTime" : 1666931127149,
+    "createdTime" : 1667176041952,
     "edgeGroupAll" : false,
     "externalId" : null,
     "groupAll" : false,
     "id" : {
       "entityType" : "ENTITY_GROUP",
-      "id" : "8c7e11d0-5678-11ed-9bfe-295761657fe1"
+      "id" : "c9173e00-58b2-11ed-9bfe-295761657fe1"
     },
-    "name" : "Hyperscaler Customer B",
+    "name" : "Temperature Sensors",
     "ownerId" : {
       "entityType" : "TENANT",
       "id" : "a283e0f0-55a5-11ed-9bfe-295761657fe1"
     },
-    "type" : "CUSTOMER"
+    "type" : "DEVICE"
   },
   "relations" : [ ],
   "attributes" : {

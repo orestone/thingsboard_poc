@@ -27,6 +27,18 @@
       "fromIndex" : 1,
       "toIndex" : 2,
       "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 2,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 2,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 2,
+      "type" : "Success"
     } ],
     "firstNodeIndex" : null,
     "nodes" : [ {
@@ -37,7 +49,7 @@
       },
       "configuration" : {
         "msgCount" : 0,
-        "periodInSeconds" : 60,
+        "periodInSeconds" : 120,
         "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = (Math.random() * 0.3) + 5 * Math.sin(degrees_to_radians(minuteHandAngleDegs)).toFixed(2);\n\nvar msg = {\n    value: 22 + v,\n    type: \"TEMPERATURE\",\n    simon: \"Simon\",\n    minuteHand,\n    minuteHandAngleDegs\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
         "originatorId" : "27c79630-55b0-11ed-8ab1-ebe8b1422014",
         "originatorType" : "DEVICE"
@@ -60,7 +72,7 @@
       },
       "configuration" : {
         "msgCount" : 0,
-        "periodInSeconds" : 60,
+        "periodInSeconds" : 120,
         "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = (Math.random() * 0.3) + 8 * Math.cos(degrees_to_radians(minuteHandAngleDegs) * 4).toFixed(2);\n\nvar msg = {\n    value: 22 + v,\n    type: \"TEMPERATURE\",\n    simon: \"Simon\",\n    minuteHand,\n    minuteHandAngleDegs\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
         "originatorId" : "67255ba0-55b0-11ed-b28a-eb999599ab40",
         "originatorType" : "DEVICE"
@@ -78,8 +90,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 614,
-        "layoutY" : 169
+        "layoutX" : 824,
+        "layoutY" : 406
       },
       "configuration" : {
         "ruleChainId" : "a2b996f0-55a5-11ed-9bfe-295761657fe1"
@@ -94,6 +106,111 @@
       "name" : "Feed in to normal chain",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.flow.TbRuleChainInputNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 324,
+        "layoutY" : 444
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = (Math.random() * 2.0) + 5 * Math.cos(degrees_to_radians(minuteHandAngleDegs) * 7).toFixed(2);\n\nvar msg = {\n    value: 22 + v,\n    type: \"TEMPERATURE\",\n    simon: \"Simon\",\n    minuteHand,\n    minuteHandAngleDegs\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
+        "originatorId" : "7c4f0a60-5684-11ed-8ab1-ebe8b1422014",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "d1bbbde0-58aa-11ed-b28a-eb999599ab40"
+      },
+      "name" : "T3 simulator",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 251,
+        "layoutY" : 577
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : {
+            "entityType" : "ENTITY_GROUP",
+            "id" : "55c63b60-58ab-11ed-8ab1-ebe8b1422014"
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "avTempSensorValue",
+          "defaultValue" : -11,
+          "aggFunction" : "AVG",
+          "target" : "avCompoundsSensorValue"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "",
+          "defaultValue" : 0,
+          "aggFunction" : "COUNT",
+          "target" : "compoundsCount"
+        } ],
+        "queueName" : "Main"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "39c2dbd0-590a-11ed-8ab1-ebe8b1422014"
+      },
+      "name" : "Roll up to Hall",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 280,
+        "layoutY" : 701
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "group",
+          "entityGroupId" : {
+            "entityType" : "ENTITY_GROUP",
+            "id" : "c9173e00-58b2-11ed-9bfe-295761657fe1"
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "value",
+          "defaultValue" : -15,
+          "aggFunction" : "AVG",
+          "target" : "avTempSensorValue"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "",
+          "defaultValue" : 0,
+          "aggFunction" : "COUNT",
+          "target" : "sensorsCount"
+        } ],
+        "queueName" : "Main"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "39c2dbd1-590a-11ed-8ab1-ebe8b1422014"
+      },
+      "name" : "Roll up to Compounds",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
     } ],
     "ruleChainConnections" : null
   },

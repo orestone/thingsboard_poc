@@ -1,0 +1,42 @@
+{
+  "entityType" : "INTEGRATION",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "allowCreateDevicesOrAssets" : true,
+    "configuration" : {
+      "clientConfiguration" : {
+        "connectTimeoutSec" : 10,
+        "connectionString" : "Endpoint=sb://nextdc-localhost-eventhub.servicebus.windows.net/;SharedAccessKeyName=thingsboard_read;SharedAccessKey=/ZWD3FjelgTI4H4ACLdLEQZ4Pz312dXrwBe7bFIP91s=;EntityPath=environment",
+        "consumerGroup" : "my-consumer-group",
+        "iotHubName" : ""
+      },
+      "metadata" : { }
+    },
+    "createdTime" : 1666935889383,
+    "debugMode" : true,
+    "defaultConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "0732cf90-567b-11ed-9bfe-295761657fe1"
+    },
+    "downlinkConverterId" : null,
+    "edgeTemplate" : false,
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "INTEGRATION",
+      "id" : "a3014f70-5683-11ed-b28a-eb999599ab40"
+    },
+    "name" : "AzureEventHubIntegration",
+    "remote" : false,
+    "routingKey" : "3311d6f9-cc97-d0ae-259a-0d1987cb026d",
+    "secret" : "r0jcfu7szw3f0qlcml04",
+    "tenantId" : null,
+    "type" : "AZURE_EVENT_HUB"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

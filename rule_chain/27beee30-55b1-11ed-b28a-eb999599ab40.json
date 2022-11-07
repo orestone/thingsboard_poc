@@ -13,7 +13,7 @@
       "entityType" : "RULE_CHAIN",
       "id" : "27beee30-55b1-11ed-b28a-eb999599ab40"
     },
-    "name" : "Temperature Emulator",
+    "name" : "Sensor Simulator",
     "root" : false,
     "tenantId" : null,
     "type" : "CORE"
@@ -33,11 +33,39 @@
       "type" : "Success"
     }, {
       "fromIndex" : 4,
-      "toIndex" : 2,
+      "toIndex" : 6,
       "type" : "Success"
     }, {
       "fromIndex" : 5,
       "toIndex" : 2,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 7,
+      "toIndex" : 2,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 11,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 12,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 6,
       "type" : "Success"
     } ],
     "firstNodeIndex" : null,
@@ -50,8 +78,8 @@
       "configuration" : {
         "msgCount" : 0,
         "periodInSeconds" : 120,
-        "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = (Math.random() * 0.3) + 5 * Math.sin(degrees_to_radians(minuteHandAngleDegs)).toFixed(2);\n\nvar msg = {\n    value: 22 + v,\n    type: \"TEMPERATURE\",\n    simon: \"Simon\",\n    minuteHand,\n    minuteHandAngleDegs\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
-        "originatorId" : "27c79630-55b0-11ed-8ab1-ebe8b1422014",
+        "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = 1.1 + 1 * Math.sin(degrees_to_radians(minuteHandAngleDegs)).toFixed(2);\n\nvar msg = {\n    value: v,\n   // type: \"TEMPERATURE\",\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
+        "originatorId" : "9b96bec0-5a73-11ed-a40f-6527c4d13844",
         "originatorType" : "DEVICE"
       },
       "createdTime" : 0,
@@ -61,20 +89,20 @@
         "entityType" : "RULE_NODE",
         "id" : "4355a7a0-55b2-11ed-b28a-eb999599ab40"
       },
-      "name" : "T1 simulator",
+      "name" : "S-g simulator",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 308,
-        "layoutY" : 276
+        "layoutX" : 297,
+        "layoutY" : 137
       },
       "configuration" : {
         "msgCount" : 0,
         "periodInSeconds" : 120,
-        "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = (Math.random() * 0.3) + 8 * Math.cos(degrees_to_radians(minuteHandAngleDegs) * 4).toFixed(2);\n\nvar msg = {\n    value: 22 + v,\n    type: \"TEMPERATURE\",\n    simon: \"Simon\",\n    minuteHand,\n    minuteHandAngleDegs\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
-        "originatorId" : "67255ba0-55b0-11ed-b28a-eb999599ab40",
+        "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = 0.2 + 0.2 * Math.cos(degrees_to_radians(minuteHandAngleDegs) * 4).toFixed(2);\n\nvar msg = {\n    value: v,\n//    type: \"TEMPERATURE\",\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
+        "originatorId" : "11766600-5b40-11ed-a40f-6527c4d13844",
         "originatorType" : "DEVICE"
       },
       "createdTime" : 0,
@@ -84,14 +112,14 @@
         "entityType" : "RULE_NODE",
         "id" : "4355ceb0-55b2-11ed-b28a-eb999599ab40"
       },
-      "name" : "T2 simulator",
+      "name" : "S-h simulator",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 824,
-        "layoutY" : 406
+        "layoutX" : 1211,
+        "layoutY" : 407
       },
       "configuration" : {
         "ruleChainId" : "a2b996f0-55a5-11ed-9bfe-295761657fe1"
@@ -109,14 +137,14 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 324,
-        "layoutY" : 444
+        "layoutX" : 303,
+        "layoutY" : 207
       },
       "configuration" : {
         "msgCount" : 0,
         "periodInSeconds" : 60,
-        "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = (Math.random() * 2.0) + 5 * Math.cos(degrees_to_radians(minuteHandAngleDegs) * 7).toFixed(2);\n\nvar msg = {\n    value: 22 + v,\n    type: \"TEMPERATURE\",\n    simon: \"Simon\",\n    minuteHand,\n    minuteHandAngleDegs\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
-        "originatorId" : "7c4f0a60-5684-11ed-8ab1-ebe8b1422014",
+        "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = 0.51 + 0.5 * Math.cos(degrees_to_radians(minuteHandAngleDegs) * 7).toFixed(2);\n\nvar msg = {\n    value: v,\n//    type: \"TEMPERATURE\",\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
+        "originatorId" : "19502230-5b40-11ed-9bfe-295761657fe1",
         "originatorType" : "DEVICE"
       },
       "createdTime" : 0,
@@ -126,64 +154,41 @@
         "entityType" : "RULE_NODE",
         "id" : "d1bbbde0-58aa-11ed-b28a-eb999599ab40"
       },
-      "name" : "T3 simulator",
+      "name" : "S-j simulator",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 251,
-        "layoutY" : 577
+        "layoutX" : 335,
+        "layoutY" : 535
       },
       "configuration" : {
         "periodValue" : 1,
         "periodTimeUnit" : "MINUTES",
         "parentEntitiesQuery" : {
-          "type" : "group",
-          "entityGroupId" : {
-            "entityType" : "ENTITY_GROUP",
-            "id" : "55c63b60-58ab-11ed-8ab1-ebe8b1422014"
-          }
-        },
-        "aggMappings" : [ {
-          "sourceScope" : "LATEST_TELEMETRY",
-          "source" : "avTempSensorValue",
-          "defaultValue" : -11,
-          "aggFunction" : "AVG",
-          "target" : "avCompoundsSensorValue"
-        }, {
-          "sourceScope" : "LATEST_TELEMETRY",
-          "source" : "",
-          "defaultValue" : 0,
-          "aggFunction" : "COUNT",
-          "target" : "compoundsCount"
-        } ],
-        "queueName" : "Main"
-      },
-      "createdTime" : 0,
-      "debugMode" : true,
-      "externalId" : null,
-      "id" : {
-        "entityType" : "RULE_NODE",
-        "id" : "39c2dbd0-590a-11ed-8ab1-ebe8b1422014"
-      },
-      "name" : "Roll up to Hall",
-      "ruleChainId" : null,
-      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
-    }, {
-      "additionalInfo" : {
-        "description" : "",
-        "layoutX" : 280,
-        "layoutY" : 701
-      },
-      "configuration" : {
-        "periodValue" : 1,
-        "periodTimeUnit" : "MINUTES",
-        "parentEntitiesQuery" : {
-          "type" : "group",
-          "entityGroupId" : {
-            "entityType" : "ENTITY_GROUP",
-            "id" : "c9173e00-58b2-11ed-9bfe-295761657fe1"
+          "type" : "relationsQuery",
+          "rootEntityId" : {
+            "entityType" : "ASSET",
+            "id" : "eb9aec70-55af-11ed-bb6e-8f34ea6bbc86"
+          },
+          "relationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : [ ]
+            } ]
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 3,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : null
+            } ]
           }
         },
         "aggMappings" : [ {
@@ -208,7 +213,372 @@
         "entityType" : "RULE_NODE",
         "id" : "39c2dbd1-590a-11ed-8ab1-ebe8b1422014"
       },
-      "name" : "Roll up to Compounds",
+      "name" : "Roll up Temperatures",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 332,
+        "layoutY" : 466
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = (Math.random() * 2.0) + 10 * Math.cos(degrees_to_radians(minuteHandAngleDegs) * 10).toFixed(2);\n\nvar msg = {\n    value: 22 + v\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
+        "originatorId" : "c51069b0-58dc-11ed-9bfe-295761657fe1",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "6e62d120-597c-11ed-9bfe-295761657fe1"
+      },
+      "name" : "TS4 simulator",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : null,
+        "layoutX" : 1211,
+        "layoutY" : 735
+      },
+      "configuration" : {
+        "defaultTTL" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f698d640-5984-11ed-9bfe-295761657fe1"
+      },
+      "name" : "Save Timeseries",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 306,
+        "layoutY" : 282
+      },
+      "configuration" : {
+        "msgCount" : 0,
+        "periodInSeconds" : 60,
+        "jsScript" : "const degrees_to_radians = deg => (deg * Math.PI) / 180.0;\nconst minMs = 1000 * 60;\nlet minuteHand = (Date.now() / minMs) % 60;\nlet minuteHandAngleDegs = minuteHand * 6;\nlet v = 1 + 0.5 * Math.cos(degrees_to_radians(minuteHandAngleDegs) * 2).toFixed(2);\n\nvar msg = {\n    value: v,\n};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn {\n    msg: msg,\n    msgType: msgType\n};",
+        "originatorId" : "269fa0d0-5b6a-11ed-a40f-6527c4d13844",
+        "originatorType" : "DEVICE"
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7384dad0-5c02-11ed-a40f-6527c4d13844"
+      },
+      "name" : "S-k simulator",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 270,
+        "layoutY" : 737
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "single",
+          "entityId" : {
+            "entityType" : "ASSET",
+            "id" : "46de5f40-5bff-11ed-9bfe-295761657fe1"
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : [ ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "value",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "supplyingKw"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "",
+          "defaultValue" : 0,
+          "aggFunction" : "COUNT",
+          "target" : "numChildren"
+        } ],
+        "queueName" : "Main"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "22da9a90-5c0f-11ed-b28a-eb999599ab40"
+      },
+      "name" : "Supplying C-k",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 282,
+        "layoutY" : 811
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "single",
+          "entityId" : {
+            "entityType" : "ASSET",
+            "id" : "311d8640-5bff-11ed-b28a-eb999599ab40"
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : [ ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "value",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "supplyingKw"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "",
+          "defaultValue" : 0,
+          "aggFunction" : "COUNT",
+          "target" : "numChildren"
+        } ],
+        "queueName" : "Main"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7a9cf020-5e30-11ed-b28a-eb999599ab40"
+      },
+      "name" : "Supplying C-m",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 315,
+        "layoutY" : 889
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "single",
+          "entityId" : {
+            "entityType" : "ASSET",
+            "id" : "3c18a6b0-5bff-11ed-bb6e-8f34ea6bbc86"
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : [ ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "value",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "supplyingKw"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "",
+          "defaultValue" : 0,
+          "aggFunction" : "COUNT",
+          "target" : "numChildren"
+        } ],
+        "queueName" : "Main"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "7a9d1730-5e30-11ed-b28a-eb999599ab40"
+      },
+      "name" : "Supplying C-n",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 379,
+        "layoutY" : 973
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "single",
+          "entityId" : {
+            "entityType" : "ASSET",
+            "id" : "23353b80-5c00-11ed-bb6e-8f34ea6bbc86"
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : [ ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "value",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "supplyingKw"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "",
+          "defaultValue" : 0,
+          "aggFunction" : "COUNT",
+          "target" : "numChildren"
+        } ],
+        "queueName" : "Main"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a1241ba0-5e31-11ed-bb6e-8f34ea6bbc86"
+      },
+      "name" : "Supplying C-h",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 637,
+        "layoutY" : 1020
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "single",
+          "entityId" : {
+            "entityType" : "ASSET",
+            "id" : "28da8b80-5c00-11ed-9bfe-295761657fe1"
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : [ ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "value",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "supplyingKw"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "",
+          "defaultValue" : 0,
+          "aggFunction" : "COUNT",
+          "target" : "numChildren"
+        } ],
+        "queueName" : "Main"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a12442b0-5e31-11ed-bb6e-8f34ea6bbc86"
+      },
+      "name" : "Supplying C-j",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 894,
+        "layoutY" : 1021
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "single",
+          "entityId" : {
+            "entityType" : "ASSET",
+            "id" : "1c5e2240-5c00-11ed-9bfe-295761657fe1"
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : [ ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "value",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "supplyingKw"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "",
+          "defaultValue" : 0,
+          "aggFunction" : "COUNT",
+          "target" : "numChildren"
+        } ],
+        "queueName" : "Main"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a12469c0-5e31-11ed-bb6e-8f34ea6bbc86"
+      },
+      "name" : "Supplying C-g",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
     } ],

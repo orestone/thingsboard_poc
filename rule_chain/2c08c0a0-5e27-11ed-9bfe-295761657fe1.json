@@ -1,0 +1,266 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Sums all the child elements for a virtual sensor"
+    },
+    "configuration" : null,
+    "createdTime" : 1667775785386,
+    "debugMode" : true,
+    "externalId" : null,
+    "firstRuleNodeId" : null,
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "2c08c0a0-5e27-11ed-9bfe-295761657fe1"
+    },
+    "name" : "Virtual Sensors",
+    "root" : false,
+    "tenantId" : null,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 1,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 2,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 3,
+      "toIndex" : 0,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : null,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 764,
+        "layoutY" : 203
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "12773a20-5e33-11ed-9bfe-295761657fe1"
+      },
+      "name" : "Save roll ups",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 333,
+        "layoutY" : 103
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "relationsQuery",
+          "rootEntityId" : {
+            "entityType" : "ASSET",
+            "id" : "1e409bb0-5bf1-11ed-bb6e-8f34ea6bbc86"
+          },
+          "relationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 5,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : null
+            } ]
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : "KW",
+              "entityTypes" : [ "DEVICE" ]
+            }, {
+              "relationType" : "Contains",
+              "entityTypes" : [ ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "value",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "value"
+        }, {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "",
+          "defaultValue" : 0,
+          "aggFunction" : "COUNT",
+          "target" : "numChildren"
+        } ],
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f6c759c0-5e39-11ed-b28a-eb999599ab40"
+      },
+      "name" : "Power Chain Tree rollUp",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 332,
+        "layoutY" : 199
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "single",
+          "entityId" : {
+            "entityType" : "CUSTOMER",
+            "id" : "04daa930-5b25-11ed-b28a-eb999599ab40"
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 10,
+            "filters" : [ {
+              "relationType" : null,
+              "entityTypes" : [ "DEVICE" ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "value",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "value"
+        } ],
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "df54d2e0-5f1a-11ed-bb6e-8f34ea6bbc86"
+      },
+      "name" : "Customer 1 Tree rollUp",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 333,
+        "layoutY" : 308
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "single",
+          "entityId" : {
+            "entityType" : "CUSTOMER",
+            "id" : "0a0dfd80-5b25-11ed-b28a-eb999599ab40"
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 5,
+            "filters" : [ {
+              "relationType" : null,
+              "entityTypes" : [ "DEVICE" ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "value",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "value"
+        } ],
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "0e88d850-5f38-11ed-b28a-eb999599ab40"
+      },
+      "name" : "Customer 2 Tree rollUp",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 349,
+        "layoutY" : 542
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "relationsQuery",
+          "rootEntityId" : {
+            "entityType" : "ASSET",
+            "id" : "1e409bb0-5bf1-11ed-bb6e-8f34ea6bbc86"
+          },
+          "relationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 5,
+            "filters" : [ {
+              "relationType" : "Contains",
+              "entityTypes" : null
+            } ]
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : "°C",
+              "entityTypes" : [ "DEVICE" ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "value",
+          "defaultValue" : 0,
+          "aggFunction" : "AVG",
+          "target" : "temperature"
+        } ],
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1eada550-5fd6-11ed-bb6e-8f34ea6bbc86"
+      },
+      "name" : "Temperature rollUp",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

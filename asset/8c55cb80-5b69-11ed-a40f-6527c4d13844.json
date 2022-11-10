@@ -1,0 +1,123 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1667474440248,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "8c55cb80-5b69-11ed-a40f-6527c4d13844"
+    },
+    "label" : null,
+    "name" : "4-PDU1",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Why?"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "8c55cb80-5b69-11ed-a40f-6527c4d13844"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "b8ed8210-5f32-11ed-b28a-eb999599ab40"
+    },
+    "type" : "KW",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "8c55cb80-5b69-11ed-a40f-6527c4d13844"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "bc418f10-5f32-11ed-a40f-6527c4d13844"
+    },
+    "type" : "KW",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "8c55cb80-5b69-11ed-a40f-6527c4d13844"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d7a626c0-5e48-11ed-a40f-6527c4d13844"
+    },
+    "type" : "KW",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "8c55cb80-5b69-11ed-a40f-6527c4d13844"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "19502230-5b40-11ed-9bfe-295761657fe1"
+    },
+    "type" : "KW",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "8c55cb80-5b69-11ed-a40f-6527c4d13844"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "269fa0d0-5b6a-11ed-a40f-6527c4d13844"
+    },
+    "type" : "KW",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "8c55cb80-5b69-11ed-a40f-6527c4d13844"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "49070100-5f33-11ed-8ab1-ebe8b1422014"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "eb9aec70-55af-11ed-bb6e-8f34ea6bbc86"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "8c55cb80-5b69-11ed-a40f-6527c4d13844"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "28f81a50-5b6b-11ed-8ab1-ebe8b1422014"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "8c55cb80-5b69-11ed-a40f-6527c4d13844"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

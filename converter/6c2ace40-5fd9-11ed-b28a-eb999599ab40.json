@@ -1,0 +1,27 @@
+{
+  "entityType" : "CONVERTER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Set lots of sensor in bulk"
+    },
+    "configuration" : {
+      "decoder" : "var dataArray = decodeToJson(payload);\r\n\r\nvar resultsArray = [];\r\n\r\nfor (var i=0; i < dataArray.length; i++){\r\n    \r\n    var data = dataArray[i];\r\n    \r\n    var deviceName = data.tag;\r\n    var deviceType = data.sensorType;\r\n\r\n    var result = {\r\n       deviceName: deviceName,\r\n       deviceType: deviceType,\r\n       telemetry: {\r\n           value: data.value,\r\n           type: data.type\r\n       }\r\n    }\r\n\r\n    resultsArray.push(result)\r\n}\r\n\r\n\r\nfunction decodeToString(payload) {\r\n   return String.fromCharCode.apply(String, payload);\r\n}\r\n\r\nfunction decodeToJson(payload) {\r\n   var str = decodeToString(payload);\r\n   var data = JSON.parse(str);\r\n   return data;\r\n}\r\n\r\nreturn resultsArray;",
+      "encoder" : null
+    },
+    "createdTime" : 1667962294564,
+    "debugMode" : true,
+    "edgeTemplate" : false,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CONVERTER",
+      "id" : "6c2ace40-5fd9-11ed-b28a-eb999599ab40"
+    },
+    "name" : "Azure-Bulk",
+    "tenantId" : null,
+    "type" : "UPLINK"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

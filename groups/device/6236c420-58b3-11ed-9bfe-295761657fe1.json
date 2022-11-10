@@ -8,11 +8,13 @@
       "columns" : [ {
         "type" : "ENTITY_FIELD",
         "key" : "created_time",
-        "sortOrder" : "DESC"
+        "sortOrder" : "NONE"
       }, {
         "type" : "ENTITY_FIELD",
         "key" : "name",
-        "sortOrder" : "NONE"
+        "sortOrder" : "ASC",
+        "title" : null,
+        "mobileHide" : null
       }, {
         "type" : "ENTITY_FIELD",
         "key" : "device_profile",
@@ -21,6 +23,18 @@
         "type" : "ENTITY_FIELD",
         "key" : "label",
         "sortOrder" : "NONE"
+      }, {
+        "type" : "TIMESERIES",
+        "key" : "value",
+        "sortOrder" : "NONE",
+        "mobileHide" : false,
+        "title" : null
+      }, {
+        "type" : "TIMESERIES",
+        "key" : "type",
+        "sortOrder" : "NONE",
+        "mobileHide" : false,
+        "title" : null
       } ],
       "settings" : { },
       "actions" : { }

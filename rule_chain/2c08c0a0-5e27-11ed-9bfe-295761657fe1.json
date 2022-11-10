@@ -13,7 +13,7 @@
       "entityType" : "RULE_CHAIN",
       "id" : "2c08c0a0-5e27-11ed-9bfe-295761657fe1"
     },
-    "name" : "Virtual Sensors",
+    "name" : "Aggregations",
     "root" : false,
     "tenantId" : null,
     "type" : "CORE"
@@ -29,6 +29,10 @@
       "type" : "Success"
     }, {
       "fromIndex" : 3,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 5,
       "toIndex" : 0,
       "type" : "Success"
     } ],
@@ -57,8 +61,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 333,
-        "layoutY" : 103
+        "layoutX" : 339,
+        "layoutY" : 221
       },
       "configuration" : {
         "periodValue" : 1,
@@ -72,9 +76,9 @@
           "relationsQuery" : {
             "fetchLastLevelOnly" : false,
             "direction" : "FROM",
-            "maxLevel" : 5,
+            "maxLevel" : 6,
             "filters" : [ {
-              "relationType" : "Contains",
+              "relationType" : null,
               "entityTypes" : null
             } ]
           },
@@ -82,13 +86,7 @@
             "fetchLastLevelOnly" : false,
             "direction" : "FROM",
             "maxLevel" : 1,
-            "filters" : [ {
-              "relationType" : "KW",
-              "entityTypes" : [ "DEVICE" ]
-            }, {
-              "relationType" : "Contains",
-              "entityTypes" : [ ]
-            } ]
+            "filters" : [ ]
           }
         },
         "aggMappings" : [ {
@@ -97,12 +95,6 @@
           "defaultValue" : 0,
           "aggFunction" : "SUM",
           "target" : "value"
-        }, {
-          "sourceScope" : "LATEST_TELEMETRY",
-          "source" : "",
-          "defaultValue" : 0,
-          "aggFunction" : "COUNT",
-          "target" : "numChildren"
         } ],
         "queueName" : null
       },
@@ -119,8 +111,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 332,
-        "layoutY" : 199
+        "layoutX" : 327,
+        "layoutY" : 342
       },
       "configuration" : {
         "periodValue" : 1,
@@ -163,8 +155,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 333,
-        "layoutY" : 308
+        "layoutX" : 323,
+        "layoutY" : 436
       },
       "configuration" : {
         "periodValue" : 1,
@@ -257,9 +249,54 @@
       "name" : "Temperature rollUp",
       "ruleChainId" : null,
       "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 329,
+        "layoutY" : 85
+      },
+      "configuration" : {
+        "periodValue" : 1,
+        "periodTimeUnit" : "MINUTES",
+        "parentEntitiesQuery" : {
+          "type" : "single",
+          "entityId" : {
+            "entityType" : "ASSET",
+            "id" : "1e409bb0-5bf1-11ed-bb6e-8f34ea6bbc86"
+          },
+          "childRelationsQuery" : {
+            "fetchLastLevelOnly" : false,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "filters" : [ {
+              "relationType" : null,
+              "entityTypes" : [ ]
+            } ]
+          }
+        },
+        "aggMappings" : [ {
+          "sourceScope" : "LATEST_TELEMETRY",
+          "source" : "value",
+          "defaultValue" : 0,
+          "aggFunction" : "SUM",
+          "target" : "value"
+        } ],
+        "queueName" : null
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c72bcf70-600a-11ed-bb6e-8f34ea6bbc86"
+      },
+      "name" : "HV",
+      "ruleChainId" : null,
+      "type" : "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode"
     } ],
     "ruleChainConnections" : null
   },
+  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   }

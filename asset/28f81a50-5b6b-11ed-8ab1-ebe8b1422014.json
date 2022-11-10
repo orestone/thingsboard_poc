@@ -1,0 +1,51 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1667475132533,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "28f81a50-5b6b-11ed-8ab1-ebe8b1422014"
+    },
+    "label" : null,
+    "name" : "3-MSB1",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Why?"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "12cb1b21-5bf1-11ed-8ab1-ebe8b1422014"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "28f81a50-5b6b-11ed-8ab1-ebe8b1422014"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "28f81a50-5b6b-11ed-8ab1-ebe8b1422014"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "8c55cb80-5b69-11ed-a40f-6527c4d13844"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

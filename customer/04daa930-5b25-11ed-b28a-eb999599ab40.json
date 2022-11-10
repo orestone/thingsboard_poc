@@ -1,0 +1,83 @@
+{
+  "entityType" : "CUSTOMER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "",
+      "allowWhiteLabeling" : true,
+      "homeDashboardId" : null,
+      "homeDashboardHideToolbar" : true
+    },
+    "address" : null,
+    "address2" : null,
+    "city" : null,
+    "country" : null,
+    "createdTime" : 1667445007171,
+    "customerId" : null,
+    "email" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CUSTOMER",
+      "id" : "04daa930-5b25-11ed-b28a-eb999599ab40"
+    },
+    "name" : "Customer 1",
+    "ownerId" : null,
+    "parentCustomerId" : null,
+    "phone" : null,
+    "state" : null,
+    "tenantId" : null,
+    "title" : "Customer 1",
+    "zip" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "04daa930-5b25-11ed-b28a-eb999599ab40"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "3e018050-5f33-11ed-b28a-eb999599ab40"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "04daa930-5b25-11ed-b28a-eb999599ab40"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "49070100-5f33-11ed-8ab1-ebe8b1422014"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "04daa930-5b25-11ed-b28a-eb999599ab40"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "71ef7080-5ef1-11ed-bb6e-8f34ea6bbc86"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "04daa930-5b25-11ed-b28a-eb999599ab40"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "782f2bc0-5ef1-11ed-bb6e-8f34ea6bbc86"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "entityType" : "ENTITY_GROUP",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : {
+      "columns" : [ {
+        "type" : "ENTITY_FIELD",
+        "key" : "name",
+        "sortOrder" : "ASC",
+        "title" : null,
+        "mobileHide" : null
+      }, {
+        "type" : "ENTITY_FIELD",
+        "key" : "type",
+        "sortOrder" : "NONE"
+      }, {
+        "type" : "TIMESERIES",
+        "key" : "value",
+        "sortOrder" : "NONE",
+        "mobileHide" : false,
+        "title" : null
+      } ],
+      "settings" : { },
+      "actions" : { }
+    },
+    "createdTime" : 1667445007212,
+    "edgeGroupAll" : false,
+    "externalId" : null,
+    "groupAll" : true,
+    "id" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "04e0eac0-5b25-11ed-b28a-eb999599ab40"
+    },
+    "name" : "All",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "04daa930-5b25-11ed-b28a-eb999599ab40"
+    },
+    "type" : "ASSET"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "groupEntities" : true
+}

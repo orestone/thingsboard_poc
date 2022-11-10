@@ -1,0 +1,54 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1667862854005,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "0a0dfd80-5b25-11ed-b28a-eb999599ab40"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "e4f9aa50-5ef1-11ed-8ab1-ebe8b1422014"
+    },
+    "label" : null,
+    "name" : "R3",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "0a0dfd80-5b25-11ed-b28a-eb999599ab40"
+    },
+    "tenantId" : null,
+    "type" : "RackType"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "c6e5ecb0-5f21-11ed-bb6e-8f34ea6bbc86"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "e4f9aa50-5ef1-11ed-8ab1-ebe8b1422014"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "46d94500-5f06-11ed-a40f-6527c4d13844"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "e4f9aa50-5ef1-11ed-8ab1-ebe8b1422014"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

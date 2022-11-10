@@ -45,7 +45,7 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "ASSET",
-      "id" : "e508ec10-58dc-11ed-b28a-eb999599ab40"
+      "id" : "a1aedfc0-59ad-11ed-b28a-eb999599ab40"
     },
     "to" : {
       "entityType" : "DEVICE",
@@ -60,7 +60,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1667201222290,
+      "lastUpdateTs" : 1667270762290,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -68,16 +68,16 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1667201222290,
-      "longValue" : 1667201222290,
+      "lastUpdateTs" : 1667270762290,
+      "longValue" : 1667270762290,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1667200617813,
-      "longValue" : 1667200617244,
+      "lastUpdateTs" : 1667270131942,
+      "longValue" : 1667270131934,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]

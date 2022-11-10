@@ -1,0 +1,51 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1667874958840,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "1404e780-5f0e-11ed-a40f-6527c4d13844"
+    },
+    "label" : null,
+    "name" : "2-IP RING 2",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Why?"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "1404e780-5f0e-11ed-a40f-6527c4d13844"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "3e883c50-5f0e-11ed-9bfe-295761657fe1"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "1e409bb0-5bf1-11ed-bb6e-8f34ea6bbc86"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "1404e780-5f0e-11ed-a40f-6527c4d13844"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

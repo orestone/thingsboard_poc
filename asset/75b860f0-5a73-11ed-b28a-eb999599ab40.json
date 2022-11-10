@@ -1,0 +1,51 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1667368746111,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "75b860f0-5a73-11ed-b28a-eb999599ab40"
+    },
+    "label" : null,
+    "name" : "4-ORB1",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Why?"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "e52ddc20-5bf0-11ed-b28a-eb999599ab40"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "75b860f0-5a73-11ed-b28a-eb999599ab40"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "75b860f0-5a73-11ed-b28a-eb999599ab40"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "7ff7ab70-5a73-11ed-9bfe-295761657fe1"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

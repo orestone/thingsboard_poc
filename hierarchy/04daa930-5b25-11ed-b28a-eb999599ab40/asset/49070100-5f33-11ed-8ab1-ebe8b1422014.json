@@ -1,0 +1,66 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1667890939152,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "04daa930-5b25-11ed-b28a-eb999599ab40"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "49070100-5f33-11ed-8ab1-ebe8b1422014"
+    },
+    "label" : null,
+    "name" : "R1",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "04daa930-5b25-11ed-b28a-eb999599ab40"
+    },
+    "tenantId" : null,
+    "type" : "RackType"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "8c55cb80-5b69-11ed-a40f-6527c4d13844"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "49070100-5f33-11ed-8ab1-ebe8b1422014"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "04daa930-5b25-11ed-b28a-eb999599ab40"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "49070100-5f33-11ed-8ab1-ebe8b1422014"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "49070100-5f33-11ed-8ab1-ebe8b1422014"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "bfdd7a80-5f32-11ed-a40f-6527c4d13844"
+    },
+    "type" : "KW",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

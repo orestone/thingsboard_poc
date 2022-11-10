@@ -1,0 +1,63 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1667532647890,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "12cb1b21-5bf1-11ed-8ab1-ebe8b1422014"
+    },
+    "label" : null,
+    "name" : "2-IP RING 1",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Why?"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "12cb1b21-5bf1-11ed-8ab1-ebe8b1422014"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "e52ddc20-5bf0-11ed-b28a-eb999599ab40"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "12cb1b21-5bf1-11ed-8ab1-ebe8b1422014"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "28f81a50-5b6b-11ed-8ab1-ebe8b1422014"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "1e409bb0-5bf1-11ed-bb6e-8f34ea6bbc86"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "12cb1b21-5bf1-11ed-8ab1-ebe8b1422014"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

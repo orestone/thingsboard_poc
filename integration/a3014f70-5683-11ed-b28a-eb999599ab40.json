@@ -18,7 +18,7 @@
     "debugMode" : true,
     "defaultConverterId" : {
       "entityType" : "CONVERTER",
-      "id" : "0732cf90-567b-11ed-9bfe-295761657fe1"
+      "id" : "6c2ace40-5fd9-11ed-b28a-eb999599ab40"
     },
     "downlinkConverterId" : null,
     "edgeTemplate" : false,

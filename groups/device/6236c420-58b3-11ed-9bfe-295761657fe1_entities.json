@@ -1,1 +1,37 @@
-[ ]
+[ {
+  "entityType" : "DEVICE",
+  "id" : "11766600-5b40-11ed-a40f-6527c4d13844"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "19502230-5b40-11ed-9bfe-295761657fe1"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "269fa0d0-5b6a-11ed-a40f-6527c4d13844"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "87cab330-5b6b-11ed-b28a-eb999599ab40"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "88f1f8c0-5fd7-11ed-a40f-6527c4d13844"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "9b96bec0-5a73-11ed-a40f-6527c4d13844"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "b8ed8210-5f32-11ed-b28a-eb999599ab40"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "bc418f10-5f32-11ed-a40f-6527c4d13844"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "bfdd7a80-5f32-11ed-a40f-6527c4d13844"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "ccdfdca0-5f32-11ed-9bfe-295761657fe1"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "cf8f9350-5f32-11ed-b28a-eb999599ab40"
+}, {
+  "entityType" : "DEVICE",
+  "id" : "d7a626c0-5e48-11ed-a40f-6527c4d13844"
+} ]

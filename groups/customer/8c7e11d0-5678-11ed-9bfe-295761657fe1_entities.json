@@ -1,1 +1,7 @@
-[ ]
+[ {
+  "entityType" : "CUSTOMER",
+  "id" : "04daa930-5b25-11ed-b28a-eb999599ab40"
+}, {
+  "entityType" : "CUSTOMER",
+  "id" : "0a0dfd80-5b25-11ed-b28a-eb999599ab40"
+} ]

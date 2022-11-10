@@ -21,6 +21,12 @@
         "type" : "ENTITY_FIELD",
         "key" : "label",
         "sortOrder" : "NONE"
+      }, {
+        "type" : "TIMESERIES",
+        "key" : "value",
+        "sortOrder" : "NONE",
+        "mobileHide" : false,
+        "title" : "the Value field"
       } ],
       "settings" : { },
       "actions" : { }

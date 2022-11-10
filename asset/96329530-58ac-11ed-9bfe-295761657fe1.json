@@ -28,18 +28,6 @@
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "bb0aea20-58ab-11ed-8ab1-ebe8b1422014"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
-  }, {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "ASSET",
-      "id" : "96329530-58ac-11ed-9bfe-295761657fe1"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
       "id" : "7c4f0a60-5684-11ed-8ab1-ebe8b1422014"
     },
     "type" : "Contains",

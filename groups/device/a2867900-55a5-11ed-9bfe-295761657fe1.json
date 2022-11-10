@@ -1,24 +1,26 @@
 {
   "entityType" : "ENTITY_GROUP",
   "entity" : {
-    "additionalInfo" : null,
+    "additionalInfo" : {
+      "description" : ""
+    },
     "configuration" : {
       "columns" : [ {
         "type" : "ENTITY_FIELD",
-        "key" : "created_time",
-        "sortOrder" : "DESC"
-      }, {
-        "type" : "ENTITY_FIELD",
         "key" : "name",
-        "sortOrder" : "NONE"
-      }, {
-        "type" : "ENTITY_FIELD",
-        "key" : "device_profile",
-        "sortOrder" : "NONE"
+        "sortOrder" : "ASC",
+        "title" : null,
+        "mobileHide" : null
       }, {
         "type" : "ENTITY_FIELD",
         "key" : "label",
         "sortOrder" : "NONE"
+      }, {
+        "type" : "TIMESERIES",
+        "key" : "value",
+        "sortOrder" : "NONE",
+        "mobileHide" : false,
+        "title" : null
       } ],
       "settings" : { },
       "actions" : { }

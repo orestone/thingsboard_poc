@@ -37,7 +37,7 @@
       "entityType" : "ENTITY_GROUP",
       "id" : "8c7e11d0-5678-11ed-9bfe-295761657fe1"
     },
-    "name" : "Hyperscaler Customer B",
+    "name" : "Hyperscalers",
     "ownerId" : {
       "entityType" : "TENANT",
       "id" : "a283e0f0-55a5-11ed-9bfe-295761657fe1"

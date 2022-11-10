@@ -1,0 +1,749 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "description" : "",
+      "widgets" : {
+        "17ed3681-9eb5-90fb-2975-a9bd10922a8a" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "basic_timeseries",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "95cc0022-d923-0313-25fd-bd229771cec0",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "value",
+                "type" : "timeseries",
+                "label" : "${entityName}: value",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.15677074275294767,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "latestDataKeys" : [ ]
+            }, {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "d22af3f5-d687-e60a-4abe-d64b13163ca6",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "value",
+                "type" : "timeseries",
+                "label" : "${entityName}: value",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.6745793450221322,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "latestDataKeys" : [ ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 600000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 5000
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "shadowSize" : 4,
+              "fontColor" : "#545454",
+              "fontSize" : 10,
+              "xaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "yaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "grid" : {
+                "color" : "#545454",
+                "tickColor" : "#DDDDDD",
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1
+              },
+              "legend" : {
+                "show" : true,
+                "position" : "nw",
+                "backgroundColor" : "#f0f0f0",
+                "backgroundOpacity" : 0.85,
+                "labelBoxBorderColor" : "rgba(1, 1, 1, 0.45)"
+              },
+              "decimals" : 1,
+              "stack" : false,
+              "tooltipIndividual" : false
+            },
+            "title" : "New Timeseries Line Chart",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : true,
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : true,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : false,
+              "showTotal" : false,
+              "showLatest" : true
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "17ed3681-9eb5-90fb-2975-a9bd10922a8a"
+        },
+        "4df4ab0c-a448-5af6-238d-307302088bff" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "basic_timeseries",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "d614a76a-c426-2985-4dd4-8935eef02161",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "value",
+                "type" : "timeseries",
+                "label" : "Sensor ${entityName} ",
+                "color" : "#2196f3",
+                "settings" : {
+                  "hideDataByDefault" : false,
+                  "disableDataHiding" : false,
+                  "removeFromLegend" : false,
+                  "excludeFromStacking" : false,
+                  "showLines" : true,
+                  "lineWidth" : 1,
+                  "fillLines" : false,
+                  "showPoints" : true,
+                  "showPointsLineWidth" : 5,
+                  "showPointsRadius" : 2,
+                  "showPointShape" : "cross",
+                  "pointShapeFormatter" : "var size = radius * Math.sqrt(Math.PI) / 2;\nctx.moveTo(x - size, y - size);\nctx.lineTo(x + size, y + size);\nctx.moveTo(x - size, y + size);\nctx.lineTo(x + size, y - size);",
+                  "showSeparateAxis" : false,
+                  "axisPosition" : "left",
+                  "comparisonSettings" : {
+                    "showValuesForComparison" : true,
+                    "comparisonValuesLabel" : "",
+                    "color" : ""
+                  },
+                  "thresholds" : [ ]
+                },
+                "_hash" : 0.9764290109273008,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "latestDataKeys" : [ ]
+            } ],
+            "timewindow" : {
+              "realtime" : {
+                "timewindowMs" : 60000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "shadowSize" : 4,
+              "fontColor" : "#545454",
+              "fontSize" : 10,
+              "xaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "yaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "grid" : {
+                "color" : "#545454",
+                "tickColor" : "#DDDDDD",
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1
+              },
+              "legend" : {
+                "show" : true,
+                "position" : "nw",
+                "backgroundColor" : "#f0f0f0",
+                "backgroundOpacity" : 0.85,
+                "labelBoxBorderColor" : "rgba(1, 1, 1, 0.45)"
+              },
+              "decimals" : 1,
+              "stack" : false,
+              "tooltipIndividual" : false
+            },
+            "title" : "New Timeseries Line Chart",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : true,
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : true,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : false,
+              "showTotal" : false,
+              "showLatest" : true
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "4df4ab0c-a448-5af6-238d-307302088bff"
+        },
+        "c8dcb341-a9ad-ef74-af51-97f510974804" : {
+          "isSystemType" : true,
+          "bundleAlias" : "entity_admin_widgets",
+          "typeAlias" : "asset_admin_table",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "enableSearch" : true,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "entityName",
+              "displayEntityName" : true,
+              "displayEntityType" : true,
+              "entitiesTitle" : "Asset admin table",
+              "enableSelectColumnDisplay" : true
+            },
+            "title" : "New Asset admin table",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "c7f4680d-d516-5623-567f-51f5276eaa8d",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "title",
+                "type" : "entityField",
+                "label" : "Title",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.01974508643144679
+              }, {
+                "name" : "value",
+                "type" : "timeseries",
+                "label" : "value",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.4852273295749827
+              } ]
+            } ],
+            "showTitleIcon" : false,
+            "titleIcon" : "more_horiz",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : { },
+            "displayTimewindow" : true,
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "Add asset",
+                "icon" : "add",
+                "type" : "customPretty",
+                "customHtml" : "<form #addAssetForm=\"ngForm\" [formGroup]=\"addAssetFormGroup\"\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\n  <mat-toolbar fxLayout=\"row\" color=\"primary\">\n    <h2>Add asset</h2>\n    <span fxFlex></span>\n    <button mat-button mat-icon-button\n            (click)=\"cancel()\"\n            type=\"button\">\n      <mat-icon class=\"material-icons\">close</mat-icon>\n    </button>\n  </mat-toolbar>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n  </mat-progress-bar>\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content>\n      <div class=\"mat-padding\" fxLayout=\"column\">\n            <mat-form-field class=\"mat-block\">\n                <mat-label>Asset name</mat-label>\n                <input matInput formControlName=\"assetName\" required>\n                <mat-error *ngIf=\"addAssetFormGroup.get('assetName').hasError('required')\">\n                    Asset name is required.\n                </mat-error>\n            </mat-form-field>\n            <div fxLayout=\"row\" fxLayoutGap=\"8px\">\n                <tb-entity-subtype-autocomplete\n                    fxFlex=\"50\"\n                    formControlName=\"assetType\"\n                    [required]=\"true\"\n                    [entityType]=\"'ASSET'\"\n                ></tb-entity-subtype-autocomplete>\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Label</mat-label>\n                    <input matInput formControlName=\"assetLabel\">\n                </mat-form-field>\n            </div>\n            <div formGroupName=\"attributes\" fxLayout=\"row\" fxLayoutGap=\"8px\">\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Latitude</mat-label>\n                    <input type=\"number\" step=\"any\" matInput formControlName=\"latitude\">\n                </mat-form-field>\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Longitude</mat-label>\n                    <input type=\"number\" step=\"any\" matInput formControlName=\"longitude\">\n                </mat-form-field>\n            </div>\n      </div>  \n  </div>\n  <div mat-dialog-actions fxLayout=\"row\">\n    <span fxFlex></span>\n    <button mat-button color=\"primary\"\n            type=\"button\"\n            [disabled]=\"(isLoading$ | async)\"\n            (click)=\"cancel()\" cdkFocusInitial>\n      Cancel\n    </button>\n    <button mat-button mat-raised-button color=\"primary\"\n            style=\"margin-right: 20px;\"\n            type=\"submit\"\n            [disabled]=\"(isLoading$ | async) || addAssetForm.invalid || !addAssetForm.dirty\">\n      Create\n    </button>\n  </div>\n</form>\n",
+                "customCss" : "",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet assetService = $injector.get(widgetContext.servicesMap.get('assetService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\n\nopenAddAssetDialog();\n\nfunction openAddAssetDialog() {\n    customDialog.customDialog(htmlTemplate, AddAssetDialogController).subscribe();\n}\n\nfunction AddAssetDialogController(instance) {\n    let vm = instance;\n    \n    vm.addAssetFormGroup = vm.fb.group({\n      assetName: ['', [vm.validators.required]],\n      assetType: ['', [vm.validators.required]],\n      assetLabel: [''],\n      attributes: vm.fb.group({\n          latitude: [null],\n          longitude: [null]\n      })      \n    });\n    \n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    \n    vm.save = function() {\n        vm.addAssetFormGroup.markAsPristine();\n        let asset = {\n            name: vm.addAssetFormGroup.get('assetName').value,\n            type: vm.addAssetFormGroup.get('assetType').value,\n            label: vm.addAssetFormGroup.get('assetLabel').value\n        };\n        assetService.saveAsset(asset).subscribe(\n            function (asset) {\n                saveAttributes(asset.id).subscribe(\n                    function () {\n                        widgetContext.updateAliases();\n                        vm.dialogRef.close(null);\n                    }\n                );\n            }\n        );\n    };\n    \n    function saveAttributes(entityId) {\n        let attributes = vm.addAssetFormGroup.get('attributes').value;\n        let attributesArray = [];\n        for (let key in attributes) {\n            attributesArray.push({key: key, value: attributes[key]});\n        }\n        if (attributesArray.length > 0) {\n            return attributeService.saveEntityAttributes(entityId, \"SERVER_SCOPE\", attributesArray);\n        } else {\n            return widgetContext.rxjs.of([]);\n        }\n    }\n}",
+                "customResources" : [ ],
+                "id" : "70837a9d-c3de-a9a7-03c5-dccd14998758"
+              } ],
+              "actionCellButton" : [ {
+                "name" : "Edit asset",
+                "icon" : "edit",
+                "type" : "customPretty",
+                "customHtml" : "<form #editAssetForm=\"ngForm\" [formGroup]=\"editAssetFormGroup\"\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\n  <mat-toolbar fxLayout=\"row\" color=\"primary\">\n    <h2>Edit asset</h2>\n    <span fxFlex></span>\n    <button mat-button mat-icon-button\n            (click)=\"cancel()\"\n            type=\"button\">\n      <mat-icon class=\"material-icons\">close</mat-icon>\n    </button>\n  </mat-toolbar>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n  </mat-progress-bar>\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content>\n      <div class=\"mat-padding\" fxLayout=\"column\">\n            <mat-form-field class=\"mat-block\">\n                <mat-label>Asset name</mat-label>\n                <input matInput formControlName=\"assetName\" required>\n                <mat-error *ngIf=\"editAssetFormGroup.get('assetName').hasError('required')\">\n                    Asset name is required.\n                </mat-error>\n            </mat-form-field>\n            <div fxLayout=\"row\" fxLayoutGap=\"8px\">\n                <tb-entity-subtype-autocomplete\n                    fxFlex=\"50\"\n                    formControlName=\"assetType\"\n                    [required]=\"true\"\n                    [entityType]=\"'ASSET'\"\n                ></tb-entity-subtype-autocomplete>\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Label</mat-label>\n                    <input matInput formControlName=\"assetLabel\">\n                </mat-form-field>\n            </div>\n            <div formGroupName=\"attributes\" fxLayout=\"row\" fxLayoutGap=\"8px\">\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Latitude</mat-label>\n                    <input type=\"number\" step=\"any\" matInput formControlName=\"latitude\">\n                </mat-form-field>\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Longitude</mat-label>\n                    <input type=\"number\" step=\"any\" matInput formControlName=\"longitude\">\n                </mat-form-field>\n            </div>\n      </div>  \n  </div>\n  <div mat-dialog-actions fxLayout=\"row\">\n    <span fxFlex></span>\n    <button mat-button color=\"primary\"\n            type=\"button\"\n            [disabled]=\"(isLoading$ | async)\"\n            (click)=\"cancel()\" cdkFocusInitial>\n      Cancel\n    </button>\n    <button mat-button mat-raised-button color=\"primary\"\n            type=\"submit\"\n            style=\"margin-right: 20px;\"\n            [disabled]=\"(isLoading$ | async) || editAssetForm.invalid || !editAssetForm.dirty\">\n      Update\n    </button>\n  </div>\n</form>\n",
+                "customCss" : "",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet assetService = $injector.get(widgetContext.servicesMap.get('assetService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\n\nopenEditAssetDialog();\n\nfunction openEditAssetDialog() {\n    customDialog.customDialog(htmlTemplate, EditAssetDialogController).subscribe();\n}\n\nfunction EditAssetDialogController(instance) {\n    let vm = instance;\n    \n    vm.asset = null;\n    vm.attributes = {};\n    \n    vm.editAssetFormGroup = vm.fb.group({\n      assetName: ['', [vm.validators.required]],\n      assetType: ['', [vm.validators.required]],\n      assetLabel: [''],\n      attributes: vm.fb.group({\n          latitude: [null],\n          longitude: [null]\n      })      \n    });\n    \n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    \n    vm.save = function() {\n        vm.editAssetFormGroup.markAsPristine();\n        vm.asset.name = vm.editAssetFormGroup.get('assetName').value,\n        vm.asset.type = vm.editAssetFormGroup.get('assetType').value,\n        vm.asset.label = vm.editAssetFormGroup.get('assetLabel').value\n        assetService.saveAsset(vm.asset).subscribe(\n            function () {\n                saveAttributes().subscribe(\n                    function () {\n                        widgetContext.updateAliases();\n                        vm.dialogRef.close(null);\n                    }\n                );\n            }\n        );\n    };\n    \n    getEntityInfo();\n    \n    function getEntityInfo() {\n        assetService.getAsset(entityId.id).subscribe(\n            function (asset) {\n                attributeService.getEntityAttributes(entityId, 'SERVER_SCOPE',\n                                                    ['latitude', 'longitude']).subscribe(\n                   function (attributes) {\n                        for (let i = 0; i < attributes.length; i++) {\n                            vm.attributes[attributes[i].key] = attributes[i].value; \n                        }\n                        vm.asset = asset;\n                        vm.editAssetFormGroup.patchValue(\n                            {\n                                assetName: vm.asset.name,\n                                assetType: vm.asset.type,\n                                assetLabel: vm.asset.label,\n                                attributes: {\n                                    latitude: vm.attributes.latitude,\n                                    longitude: vm.attributes.longitude\n                                }\n                            }, {emitEvent: false}\n                        );\n                   } \n                );\n            }\n        );    \n    }\n    \n    function saveAttributes() {\n        let attributes = vm.editAssetFormGroup.get('attributes').value;\n        let attributesArray = [];\n        for (let key in attributes) {\n            attributesArray.push({key: key, value: attributes[key]});\n        }\n        if (attributesArray.length > 0) {\n            return attributeService.saveEntityAttributes(entityId, 'SERVER_SCOPE', attributesArray);\n        } else {\n            return widgetContext.rxjs.of([]);\n        }\n    }\n}",
+                "customResources" : [ ],
+                "id" : "93931e52-5d7c-903e-67aa-b9435df44ff4"
+              }, {
+                "name" : "Delete asset",
+                "icon" : "delete",
+                "type" : "custom",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet dialogs = $injector.get(widgetContext.servicesMap.get('dialogs'));\nlet assetService = $injector.get(widgetContext.servicesMap.get('assetService'));\n\nopenDeleteAssetDialog();\n\nfunction openDeleteAssetDialog() {\n    let title = \"Are you sure you want to delete the asset \" + entityName +  \"?\";\n    let content = \"Be careful, after the confirmation, the asset and all related data will become unrecoverable!\";\n    dialogs.confirm(title, content, 'Cancel', 'Delete').subscribe(\n        function (result) {\n            if (result) {\n                deleteAsset();\n            }\n        }\n    );\n}\n\nfunction deleteAsset() {\n    assetService.deleteAsset(entityId.id).subscribe(\n        function () {\n            widgetContext.updateAliases();\n        }\n    );\n}\n",
+                "id" : "ec2708f6-9ff0-186b-e4fc-7635ebfa3074"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c8dcb341-a9ad-ef74-af51-97f510974804"
+        },
+        "cb73e087-b6cc-e3ee-02d8-6d6aab2cfe48" : {
+          "isSystemType" : true,
+          "bundleAlias" : "cards",
+          "typeAlias" : "entities_hierarchy",
+          "type" : "latest",
+          "title" : "Entities hierarchy",
+          "sizeX" : 15,
+          "sizeY" : 7,
+          "row" : 0,
+          "col" : 2,
+          "config" : {
+            "timewindow" : {
+              "realtime" : {
+                "interval" : 1000,
+                "timewindowMs" : 86400000
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "nodeRelationQueryFunction" : "var entity = nodeCtx.entity;\nvar query = {\n    parameters: {\n        rootId: entity.id.id,\n        rootType: entity.id.entityType,\n        direction: \"FROM\",\n        maxLevel: 1\n    },\n    filters: [{\n        relationType: \"Contains\",\n        entityTypes: []\n    }]\n};\nreturn query;\n\n/**\n\n// Function should return relations query object for current node used to fetch entity children.\n// Function can return 'default' string value. In this case default relations query will be used.\n\n// The following example code will construct simple relations query that will fetch relations of type 'Contains'\n// from the current entity.\n\nvar entity = nodeCtx.entity;\nvar query = {\n    parameters: {\n        rootId: entity.id.id,\n        rootType: entity.id.entityType,\n        direction: \"FROM\",\n        maxLevel: 1\n    },\n    filters: [{\n        relationType: \"Contains\",\n        entityTypes: []\n    }]\n};\nreturn query;\n\n**/\n",
+              "nodeHasChildrenFunction" : "/**\n\n// Function should return boolean value indicating whether current node has children (whether it can be expanded).\n\n// The following example code will restrict entities hierarchy expansion up to third level.\n\nreturn nodeCtx.level <= 10;\n\n// The next example code will restrict entities expansion according to the value of example 'nodeHasChildren' attribute.\n\nvar data = nodeCtx.data;\nif (data.hasOwnProperty('nodeHasChildren') && data['nodeHasChildren'] !== null) {\n    return data['nodeHasChildren'] === 'true';\n} else {\n    return true;\n}\n  \n**/\n ",
+              "nodeOpenedFunction" : "/**\n\n// Function should return boolean value indicating whether current node should be opened (expanded) when it first loaded.\n\n// The following example code will open by default nodes up to third level.\n\nreturn nodeCtx.level <= 10;\n\n**/\n ",
+              "nodeDisabledFunction" : "/**\n\n// Function should return boolean value indicating whether current node should be disabled (not selectable).\n\n// The following example code will disable current node according to the value of example 'nodeDisabled' attribute.\n\nvar data = nodeCtx.data;\nif (data.hasOwnProperty('nodeDisabled') && data['nodeDisabled'] !== null) {\n    return data['nodeDisabled'] === 'true';\n} else {\n    return false;\n}\n  \n**/\n",
+              "nodeIconFunction" : "/** \n\n// Function should return node icon info object.\n// Resulting object should contain either 'materialIcon' or 'iconUrl' property. \n// Where:\n    - 'materialIcon' - name of the material icon to be used from the Material Icons Library (https://material.io/tools/icons);\n    - 'iconUrl' - url of the external image to be used as node icon.\n// Function can return 'default' string value. In this case default icons according to entity type will be used.\n\n// The following example code shows how to use external image for devices which name starts with 'Test' and use \n// default icons for the rest of entities.\n\nvar entity = nodeCtx.entity;\nif (entity.id.entityType === 'DEVICE' && entity.name.startsWith('Test')) {\n    return {iconUrl: 'https://avatars1.githubusercontent.com/u/14793288?v=4&s=117'};\n} else {\n    return 'default';\n}\n \n**/",
+              "nodeTextFunction" : "/**\n\n// Function should return text (can be HTML code) for the current node.\n\n// The following example code will generate node text consisting of entity name and temperature if temperature value is present in entity attributes/timeseries.\n\nvar data =  nodeCtx.data;\nvar entity = nodeCtx.entity;\nvar text = entity.name;\nif (data.hasOwnProperty('temperature') && data['temperature'] !== null) {\n    text += \" <b>\"+ data['temperature'] +\" °C</b>\";\n}\nreturn text;\n\n**/",
+              "nodesSortFunction" : "/**\n\n// This function is used to sort nodes of the same level. Function should compare two nodes and return \n// integer value: \n//     - less than 0 - sort nodeCtx1 to an index lower than nodeCtx2\n//     - 0 - leave nodeCtx1 and nodeCtx2 unchanged with respect to each other\n//     - greater than 0 - sort nodeCtx2 to an index lower than nodeCtx1\n\n// The following example code will sort entities first by entity type in alphabetical order then\n// by entity name in alphabetical order.\n\nvar result = nodeCtx1.entity.id.entityType.localeCompare(nodeCtx2.entity.id.entityType);\nif (result === 0) {\n    result = nodeCtx1.entity.name.localeCompare(nodeCtx2.entity.name);\n}\nreturn result;\n  \n**/"
+            },
+            "title" : "Entities hierarchy",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "0f9d2383-b10b-cfea-871e-0c7aa5e03c40",
+              "filterId" : null,
+              "dataKeys" : [ ]
+            } ],
+            "widgetStyle" : { },
+            "actions" : { }
+          },
+          "id" : "cb73e087-b6cc-e3ee-02d8-6d6aab2cfe48"
+        },
+        "c514b404-f0df-a423-37be-63e48089e6e3" : {
+          "isSystemType" : true,
+          "bundleAlias" : "charts",
+          "typeAlias" : "basic_timeseries",
+          "type" : "timeseries",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 8,
+          "sizeY" : 5,
+          "config" : {
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "0f9d2383-b10b-cfea-871e-0c7aa5e03c40",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "value",
+                "type" : "timeseries",
+                "label" : "${entityName}: value",
+                "color" : "#2196f3",
+                "settings" : { },
+                "_hash" : 0.15677074275294767,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "latestDataKeys" : [ ]
+            }, {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "c7f4680d-d516-5623-567f-51f5276eaa8d",
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "value",
+                "type" : "timeseries",
+                "label" : "${entityName}: value",
+                "color" : "#4caf50",
+                "settings" : { },
+                "_hash" : 0.6745793450221322,
+                "units" : null,
+                "decimals" : null,
+                "funcBody" : null,
+                "usePostProcessing" : null,
+                "postFuncBody" : null
+              } ],
+              "latestDataKeys" : [ ]
+            } ],
+            "timewindow" : {
+              "hideInterval" : false,
+              "hideAggregation" : false,
+              "hideAggInterval" : false,
+              "hideTimezone" : false,
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 0,
+                "timewindowMs" : 600000,
+                "quickInterval" : "CURRENT_DAY",
+                "interval" : 5000
+              },
+              "aggregation" : {
+                "type" : "AVG",
+                "limit" : 25000
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "#fff",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "shadowSize" : 4,
+              "fontColor" : "#545454",
+              "fontSize" : 10,
+              "xaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "yaxis" : {
+                "showLabels" : true,
+                "color" : "#545454"
+              },
+              "grid" : {
+                "color" : "#545454",
+                "tickColor" : "#DDDDDD",
+                "verticalLines" : true,
+                "horizontalLines" : true,
+                "outlineWidth" : 1
+              },
+              "legend" : {
+                "show" : true,
+                "position" : "nw",
+                "backgroundColor" : "#f0f0f0",
+                "backgroundOpacity" : 0.85,
+                "labelBoxBorderColor" : "rgba(1, 1, 1, 0.45)"
+              },
+              "decimals" : 1,
+              "stack" : false,
+              "tooltipIndividual" : false
+            },
+            "title" : "New Timeseries Line Chart",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "displayTimewindow" : true,
+            "showTitleIcon" : false,
+            "titleTooltip" : "",
+            "enableDataExport" : true,
+            "widgetStyle" : { },
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "showLegend" : true,
+            "legendConfig" : {
+              "direction" : "column",
+              "position" : "bottom",
+              "sortDataKeys" : true,
+              "showMin" : false,
+              "showMax" : false,
+              "showAvg" : false,
+              "showTotal" : false,
+              "showLatest" : true
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c514b404-f0df-a423-37be-63e48089e6e3"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "Example",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "17ed3681-9eb5-90fb-2975-a9bd10922a8a" : {
+                  "sizeX" : 5,
+                  "sizeY" : 8,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "4df4ab0c-a448-5af6-238d-307302088bff" : {
+                  "sizeX" : 5,
+                  "sizeY" : 8,
+                  "row" : 0,
+                  "col" : 10
+                },
+                "c8dcb341-a9ad-ef74-af51-97f510974804" : {
+                  "sizeX" : 7,
+                  "sizeY" : 6,
+                  "row" : 8,
+                  "col" : 0
+                },
+                "cb73e087-b6cc-e3ee-02d8-6d6aab2cfe48" : {
+                  "sizeX" : 3,
+                  "sizeY" : 5,
+                  "row" : 8,
+                  "col" : 7
+                },
+                "c514b404-f0df-a423-37be-63e48089e6e3" : {
+                  "sizeX" : 5,
+                  "sizeY" : 8,
+                  "row" : 0,
+                  "col" : 5
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%",
+                "autoFillHeight" : false,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "d22af3f5-d687-e60a-4abe-d64b13163ca6" : {
+          "id" : "d22af3f5-d687-e60a-4abe-d64b13163ca6",
+          "alias" : "Top HV",
+          "filter" : {
+            "type" : "singleEntity",
+            "resolveMultiple" : false,
+            "singleEntity" : {
+              "entityType" : "ASSET",
+              "id" : "1e409bb0-5bf1-11ed-bb6e-8f34ea6bbc86"
+            }
+          }
+        },
+        "95cc0022-d923-0313-25fd-bd229771cec0" : {
+          "id" : "95cc0022-d923-0313-25fd-bd229771cec0",
+          "alias" : "Powerchains",
+          "filter" : {
+            "type" : "assetSearchQuery",
+            "resolveMultiple" : true,
+            "rootStateEntity" : false,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null,
+            "rootEntity" : {
+              "entityType" : "ASSET",
+              "id" : "1e409bb0-5bf1-11ed-bb6e-8f34ea6bbc86"
+            },
+            "direction" : "FROM",
+            "maxLevel" : 5,
+            "fetchLastLevelOnly" : false,
+            "relationType" : "Contains",
+            "assetTypes" : [ "RackType", "Why?", "WhitespaceType" ]
+          }
+        },
+        "d614a76a-c426-2985-4dd4-8935eef02161" : {
+          "id" : "d614a76a-c426-2985-4dd4-8935eef02161",
+          "alias" : "Sensors",
+          "filter" : {
+            "type" : "entityGroup",
+            "resolveMultiple" : true,
+            "groupStateEntity" : false,
+            "stateEntityParamName" : null,
+            "defaultStateGroupType" : null,
+            "defaultStateEntityGroup" : null,
+            "groupType" : "DEVICE",
+            "entityGroup" : "6236c420-58b3-11ed-9bfe-295761657fe1"
+          }
+        },
+        "c7f4680d-d516-5623-567f-51f5276eaa8d" : {
+          "id" : "c7f4680d-d516-5623-567f-51f5276eaa8d",
+          "alias" : "Customers",
+          "filter" : {
+            "type" : "entityGroup",
+            "resolveMultiple" : true,
+            "groupStateEntity" : false,
+            "stateEntityParamName" : null,
+            "defaultStateGroupType" : null,
+            "defaultStateEntityGroup" : null,
+            "groupType" : "CUSTOMER",
+            "entityGroup" : "8c7e11d0-5678-11ed-9bfe-295761657fe1"
+          }
+        },
+        "0f9d2383-b10b-cfea-871e-0c7aa5e03c40" : {
+          "id" : "0f9d2383-b10b-cfea-871e-0c7aa5e03c40",
+          "alias" : "Containers",
+          "filter" : {
+            "type" : "entityList",
+            "resolveMultiple" : true,
+            "entityType" : "ASSET",
+            "entityList" : [ "4bc72be0-5f06-11ed-8ab1-ebe8b1422014", "46d94500-5f06-11ed-a40f-6527c4d13844", "3e018050-5f33-11ed-b28a-eb999599ab40", "782f2bc0-5ef1-11ed-bb6e-8f34ea6bbc86", "71ef7080-5ef1-11ed-bb6e-8f34ea6bbc86", "e4f9aa50-5ef1-11ed-8ab1-ebe8b1422014", "5ed08600-5f06-11ed-8ab1-ebe8b1422014", "49070100-5f33-11ed-8ab1-ebe8b1422014" ]
+          }
+        },
+        "7728e668-aec5-1585-a065-abdb94ba0488" : {
+          "id" : "7728e668-aec5-1585-a065-abdb94ba0488",
+          "alias" : "Facility M1",
+          "filter" : {
+            "type" : "singleEntity",
+            "resolveMultiple" : false,
+            "singleEntity" : {
+              "entityType" : "ASSET",
+              "id" : "f75f5ae0-55b0-11ed-8ab1-ebe8b1422014"
+            }
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "hideInterval" : false,
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "timewindowMs" : 7200000,
+          "quickInterval" : "CURRENT_DAY",
+          "interval" : 15000
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true,
+        "titleColor" : "rgba(0,0,0,0.870588)",
+        "showDashboardLogo" : false,
+        "dashboardLogoUrl" : null,
+        "hideToolbar" : false,
+        "showFilters" : true,
+        "showUpdateDashboardImage" : true,
+        "dashboardCss" : ""
+      }
+    },
+    "createdTime" : 1667789571018,
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "44e942a0-5e47-11ed-bb6e-8f34ea6bbc86"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "Example",
+    "ownerId" : null,
+    "tenantId" : null,
+    "title" : "Example"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

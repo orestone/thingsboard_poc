@@ -1,0 +1,54 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1667871648352,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "0a0dfd80-5b25-11ed-b28a-eb999599ab40"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "5ed08600-5f06-11ed-8ab1-ebe8b1422014"
+    },
+    "label" : null,
+    "name" : "R2",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "0a0dfd80-5b25-11ed-b28a-eb999599ab40"
+    },
+    "tenantId" : null,
+    "type" : "RackType"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "0a0dfd80-5b25-11ed-b28a-eb999599ab40"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "5ed08600-5f06-11ed-8ab1-ebe8b1422014"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "5ed08600-5f06-11ed-8ab1-ebe8b1422014"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "d7a626c0-5e48-11ed-a40f-6527c4d13844"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "createdTime" : 1667283779516,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "a1aedfc0-59ad-11ed-b28a-eb999599ab40"
+    },
+    "label" : null,
+    "name" : "D3",
+    "ownerId" : null,
+    "tenantId" : null,
+    "type" : "Compound"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "a1aedfc0-59ad-11ed-b28a-eb999599ab40"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "c51069b0-58dc-11ed-9bfe-295761657fe1"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "eb9aec70-55af-11ed-bb6e-8f34ea6bbc86"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "a1aedfc0-59ad-11ed-b28a-eb999599ab40"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

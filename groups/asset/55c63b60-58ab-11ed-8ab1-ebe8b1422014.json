@@ -17,6 +17,12 @@
         "type" : "ENTITY_FIELD",
         "key" : "type",
         "sortOrder" : "NONE"
+      }, {
+        "type" : "TIMESERIES",
+        "key" : "avTempSensorValue",
+        "sortOrder" : "NONE",
+        "mobileHide" : false,
+        "title" : "Av T"
       } ],
       "settings" : { },
       "actions" : { }

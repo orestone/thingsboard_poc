@@ -1,0 +1,44 @@
+{
+  "entityType" : "ENTITY_GROUP",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Any of MSB / PDU / ORB /TOB"
+    },
+    "configuration" : {
+      "columns" : [ {
+        "type" : "ENTITY_FIELD",
+        "key" : "name",
+        "sortOrder" : "ASC",
+        "title" : null,
+        "mobileHide" : null
+      }, {
+        "type" : "TIMESERIES",
+        "key" : "value",
+        "sortOrder" : "NONE",
+        "mobileHide" : false,
+        "title" : null
+      } ],
+      "settings" : { },
+      "actions" : { }
+    },
+    "createdTime" : 1667368596052,
+    "edgeGroupAll" : false,
+    "externalId" : null,
+    "groupAll" : false,
+    "id" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "1c473140-5a73-11ed-8ab1-ebe8b1422014"
+    },
+    "name" : "Power Chain",
+    "ownerId" : {
+      "entityType" : "TENANT",
+      "id" : "a283e0f0-55a5-11ed-9bfe-295761657fe1"
+    },
+    "type" : "ASSET"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "groupEntities" : true
+}

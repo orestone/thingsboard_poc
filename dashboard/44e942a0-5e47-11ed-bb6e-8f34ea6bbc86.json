@@ -106,7 +106,7 @@
               "stack" : false,
               "tooltipIndividual" : false
             },
-            "title" : "New Timeseries Line Chart",
+            "title" : "Power Chain Tree",
             "dropShadow" : true,
             "enableFullscreen" : true,
             "titleStyle" : {
@@ -229,7 +229,7 @@
               "stack" : false,
               "tooltipIndividual" : false
             },
-            "title" : "New Timeseries Line Chart",
+            "title" : "Sensors",
             "dropShadow" : true,
             "enableFullscreen" : true,
             "titleStyle" : {
@@ -523,7 +523,7 @@
               "stack" : false,
               "tooltipIndividual" : false
             },
-            "title" : "New Timeseries Line Chart",
+            "title" : "Customer Tree",
             "dropShadow" : true,
             "enableFullscreen" : true,
             "titleStyle" : {
@@ -577,7 +577,7 @@
                 },
                 "c8dcb341-a9ad-ef74-af51-97f510974804" : {
                   "sizeX" : 7,
-                  "sizeY" : 6,
+                  "sizeY" : 4,
                   "row" : 8,
                   "col" : 0
                 },
@@ -701,7 +701,7 @@
         "selectedTab" : 0,
         "realtime" : {
           "realtimeType" : 0,
-          "timewindowMs" : 7200000,
+          "timewindowMs" : 1800000,
           "quickInterval" : "CURRENT_DAY",
           "interval" : 15000
         },
